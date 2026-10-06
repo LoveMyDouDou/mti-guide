@@ -1,0 +1,3703 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>锦鲤学姐Ivy的MTI翻译硕士全规划手册</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FAFBFC;
+    --cream-deep: #F0F4F5;
+    --warm-brown: #7A8A8F;
+    --deep-brown: #3D4F54;
+    --sage-green: #56B89E;
+    --sage-deep: #3D9A82;
+    --rose: #FF9EAA;
+    --rose-light: #FFD4C4;
+    --gold: #7FD0E3;
+    --ink: #2C3E50;
+    --paper: #FFFFFF;
+    --mint-light: #E8F8F2;
+    --sky-blue: #88D8F0;
+    --sky-deep: #4A90B8;
+    --lavender: #C5B4E3;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Noto Sans SC', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+
+  .font-serif {
+    font-family: 'Noto Serif SC', serif;
+  }
+
+  .font-hand {
+    font-family: 'Ma Shan Zheng', cursive;
+  }
+
+  /* 纸张纹理背景 */
+  .paper-texture {
+    position: relative;
+  }
+
+  .paper-texture::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Hero Section */
+  .hero {
+    min-height: 100vh;
+    padding-top: 100px;
+    background: linear-gradient(135deg, #F0FAF7 0%, #E8F4F8 50%, #F0F4F8 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 100px 40px 60px;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(86, 184, 158, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(136, 216, 240, 0.12) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-text {
+    animation: fadeInUp 1s ease-out;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgba(255, 158, 170, 0.18);
+    border: 1px solid var(--rose);
+    border-radius: 50px;
+    color: var(--rose);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    letter-spacing: 2px;
+  }
+
+  .hero-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.2;
+    color: var(--deep-brown);
+    margin-bottom: 24px;
+  }
+
+  .hero-title span {
+    color: var(--sage-deep);
+    position: relative;
+  }
+
+  .hero-title span::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background: rgba(136, 216, 240, 0.35);
+    z-index: -1;
+    transform: skewX(-5deg);
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+    color: var(--warm-brown);
+    margin-bottom: 32px;
+    line-height: 1.9;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--sage-deep);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 13px;
+    color: var(--warm-brown);
+    margin-top: 8px;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+  }
+
+  .btn-primary {
+    background: var(--sage-deep);
+    color: white;
+    box-shadow: 0 4px 20px rgba(61, 154, 130, 0.3);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(61, 154, 130, 0.4);
+    background: var(--sage-green);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--deep-brown);
+    border: 2px solid var(--warm-brown);
+  }
+
+  .btn-secondary:hover {
+    background: var(--warm-brown);
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  /* 学姐卡片 */
+  .hero-card {
+    background: var(--paper);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(61, 154, 130, 0.15);
+    position: relative;
+    animation: fadeInRight 1s ease-out 0.3s both;
+  }
+
+  .hero-card::before {
+    content: '"';
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 100px;
+    font-family: Georgia, serif;
+    color: var(--rose-light);
+    line-height: 1;
+  }
+
+  .avatar-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--rose-light), var(--rose));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    box-shadow: 0 4px 15px rgba(255, 158, 170, 0.3);
+  }
+
+  .avatar-info h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    color: var(--deep-brown);
+    margin-bottom: 4px;
+  }
+
+  .avatar-info p {
+    font-size: 13px;
+    color: var(--warm-brown);
+  }
+
+  .学姐-quote {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 16px;
+    color: var(--ink);
+    line-height: 1.9;
+    font-style: italic;
+    margin-bottom: 24px;
+    padding-left: 16px;
+    border-left: 3px solid var(--gold);
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tag {
+    padding: 6px 14px;
+    background: var(--cream-deep);
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--warm-brown);
+  }
+
+  .tag.highlight {
+    background: rgba(86, 184, 158, 0.15);
+    color: var(--sage-deep);
+  }
+
+  /* Section 通用样式 */
+  section {
+    padding: 100px 40px;
+    position: relative;
+  }
+
+  .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .section-label {
+    display: inline-block;
+    font-size: 14px;
+    color: var(--sage-deep);
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--deep-brown);
+    margin-bottom: 16px;
+  }
+
+  .section-desc {
+    font-size: 16px;
+    color: var(--warm-brown);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* 时间线 - 备考规划 */
+  .timeline-section {
+    background: var(--paper);
+  }
+
+  .timeline {
+    position: relative;
+    padding: 20px 0;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--sage-green), var(--gold), var(--rose));
+    transform: translateX(-50%);
+    border-radius: 3px;
+  }
+
+  .timeline-item {
+    display: flex;
+    margin-bottom: 50px;
+    position: relative;
+  }
+
+  .timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+
+  .timeline-content {
+    width: 45%;
+    background: var(--cream);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(61, 154, 130, 0.08);
+    transition: all 0.3s ease;
+  }
+
+  .timeline-content:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(61, 154, 130, 0.15);
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    width: 20px;
+    height: 20px;
+    background: var(--paper);
+    border: 4px solid var(--sage-green);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  .timeline-phase {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(86, 184, 158, 0.15);
+    color: var(--sage-deep);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  .timeline-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    color: var(--deep-brown);
+    margin-bottom: 12px;
+  }
+
+  .timeline-time {
+    font-size: 14px;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  .timeline-list {
+    list-style: none;
+  }
+
+  .timeline-list li {
+    padding: 6px 0;
+    padding-left: 20px;
+    position: relative;
+    font-size: 14px;
+    color: var(--ink);
+  }
+
+  .timeline-list li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--rose);
+    font-size: 10px;
+    top: 8px;
+  }
+
+  /* 院校推荐 */
+  .schools-section {
+    background: linear-gradient(180deg, #F0FAF7 0%, #E8F4F8 100%);
+  }
+
+  .school-tiers {
+    display: grid;
+    gap: 30px;
+  }
+
+  .tier-card {
+    background: var(--paper);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(61, 154, 130, 0.08);
+    transition: all 0.3s ease;
+  }
+
+  .tier-card:hover {
+    box-shadow: 0 10px 40px rgba(61, 154, 130, 0.15);
+  }
+
+  .tier-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 2px dashed var(--cream-deep);
+  }
+
+  .tier-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+  }
+
+  .tier-badge.s {
+    background: linear-gradient(135deg, var(--rose), #B86B77);
+  }
+
+  .tier-badge.a {
+    background: linear-gradient(135deg, var(--gold), #B8994A);
+  }
+
+  .tier-badge.b {
+    background: linear-gradient(135deg, var(--sage-green), var(--sage-deep));
+  }
+
+  .tier-info h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 20px;
+    color: var(--deep-brown);
+    margin-bottom: 4px;
+  }
+
+  .tier-info p {
+    font-size: 13px;
+    color: var(--warm-brown);
+  }
+
+  .school-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+  }
+
+  .school-item {
+    padding: 12px 16px;
+    background: var(--cream);
+    border-radius: 10px;
+    font-size: 14px;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+  }
+
+  .school-item:hover {
+    background: var(--cream-deep);
+    transform: translateX(4px);
+  }
+
+  .school-item::before {
+    content: '📍';
+    font-size: 14px;
+  }
+
+  /* 就业前景 */
+  .career-section {
+    background: var(--paper);
+  }
+
+  .career-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-bottom: 50px;
+  }
+
+  .career-card {
+    background: var(--cream);
+    border-radius: 16px;
+    padding: 28px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+  }
+
+  .career-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(61, 154, 130, 0.12);
+    border-color: var(--rose-light);
+  }
+
+  .career-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    background: linear-gradient(135deg, var(--rose-light), var(--cream-deep));
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+  }
+
+  .career-card h4 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 18px;
+    color: var(--deep-brown);
+    margin-bottom: 8px;
+  }
+
+  .career-card .salary {
+    font-size: 14px;
+    color: var(--sage-deep);
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  .career-card p {
+    font-size: 13px;
+    color: var(--warm-brown);
+    line-height: 1.7;
+  }
+
+  /* 薪资概览 */
+  .salary-overview {
+    background: linear-gradient(135deg, var(--sage-deep), var(--sage-green));
+    border-radius: 20px;
+    padding: 40px;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    text-align: center;
+  }
+
+  .salary-item h5 {
+    font-size: 13px;
+    opacity: 0.8;
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+
+  .salary-item .amount {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  .salary-item .unit {
+    font-size: 14px;
+    opacity: 0.7;
+  }
+
+  /* 技能树 */
+  .skills-section {
+    background: linear-gradient(180deg, #E8F4F8 0%, #F0FAF7 100%);
+  }
+
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .skill-category {
+    background: var(--paper);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 4px 15px rgba(61, 154, 130, 0.06);
+  }
+
+  .skill-category h4 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 18px;
+    color: var(--deep-brown);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .skill-category h4 .icon {
+    font-size: 22px;
+  }
+
+  .skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .skill-tag {
+    padding: 6px 14px;
+    background: var(--cream);
+    border-radius: 20px;
+    font-size: 13px;
+    color: var(--ink);
+    border: 1px solid var(--cream-deep);
+    transition: all 0.2s ease;
+  }
+
+  .skill-tag:hover {
+    background: var(--sage-green);
+    color: white;
+    border-color: var(--sage-green);
+  }
+
+  .skill-tag.cert {
+    background: rgba(136, 216, 240, 0.18);
+    color: #5E7A74;
+    border-color: var(--gold);
+  }
+
+  .skill-tag.cert:hover {
+    background: var(--gold);
+    color: white;
+  }
+
+  /* 备考技巧 */
+  .tips-section {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F0FAF7 100%);
+  }
+
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 22px;
+  }
+
+  .tip-card {
+    background: white;
+    border-radius: 16px;
+    padding: 26px 24px;
+    border: 1px solid #E8F0EC;
+    box-shadow: 0 4px 15px rgba(61, 154, 130, 0.06);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tip-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--sage-green);
+  }
+
+  .tip-card.cat-trans::before { background: var(--sage-green); }
+  .tip-card.cat-base::before { background: var(--sky-blue); }
+  .tip-card.cat-politics::before { background: var(--rose); }
+  .tip-card.cat-encyclo::before { background: var(--lavender); }
+  .tip-card.cat-general::before { background: var(--sky-deep); }
+
+  .tip-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(61, 154, 130, 0.12);
+  }
+
+  .tip-cat {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  .cat-trans .tip-cat { background: rgba(86, 184, 158, 0.15); color: var(--sage-deep); }
+  .cat-base .tip-cat { background: rgba(136, 216, 240, 0.22); color: var(--sky-deep); }
+  .cat-politics .tip-cat { background: rgba(255, 158, 170, 0.2); color: #E8798C; }
+  .cat-encyclo .tip-cat { background: rgba(197, 180, 227, 0.28); color: #8B7BC0; }
+  .cat-general .tip-cat { background: rgba(74, 144, 184, 0.15); color: var(--sky-deep); }
+
+  .tip-card h5 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 16px;
+    color: var(--deep-brown);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .tip-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .tip-list li {
+    font-size: 13px;
+    color: var(--warm-brown);
+    line-height: 1.7;
+    margin-bottom: 9px;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .tip-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .tip-list li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    top: 1px;
+    color: var(--sage-green);
+    font-size: 11px;
+  }
+
+  .tip-note {
+    margin-top: 16px;
+    padding: 10px 14px;
+    background: #F0FAF7;
+    border-radius: 8px;
+    font-size: 12px;
+    color: #5E7A74;
+    line-height: 1.6;
+    border-left: 3px solid var(--sage-green);
+  }
+
+  /* 学姐寄语 */
+  .message-section {
+    background: linear-gradient(135deg, #3D9A82 0%, #4A90B8 100%);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .message-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .message-section .section-inner {
+    position: relative;
+    z-index: 2;
+  }
+
+  .message-section .section-title {
+    color: white;
+  }
+
+  .message-section .section-label {
+    color: #A8E6CF;
+  }
+
+  .message-content {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-family: 'Noto Serif SC', serif;
+    font-size: 18px;
+    line-height: 2;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .message-sign {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 28px;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .message-date {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  /* Footer */
+  footer {
+    background: linear-gradient(135deg, #3D9A82 0%, #4A90B8 100%);
+    padding: 30px 40px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+  }
+
+  /* 动画 */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* 滚动动画 */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+  }
+
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* 响应式 */
+  @media (max-width: 900px) {
+    .hero-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .hero-stats {
+      justify-content: center;
+    }
+
+    .cta-buttons {
+      justify-content: center;
+    }
+
+    .timeline::before {
+      left: 20px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(odd) {
+      flex-direction: row;
+      padding-left: 50px;
+    }
+
+    .timeline-content {
+      width: 100%;
+    }
+
+    .timeline-dot {
+      left: 20px;
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    .hero {
+      padding: 60px 20px;
+    }
+
+    .salary-overview {
+      padding: 24px;
+    }
+  }
+
+  /* 回到顶部 */
+  .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--sage-deep);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(61, 154, 130, 0.3);
+  }
+
+  .back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .back-to-top:hover {
+    transform: translateY(-4px);
+    background: var(--sage-green);
+  }
+
+  /* 顶部导航栏 */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: rgba(250, 251, 252, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+
+  .navbar.scrolled {
+    box-shadow: 0 2px 20px rgba(61, 154, 130, 0.1);
+    padding: 12px 40px;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .nav-logo img {
+    height: 48px;
+    width: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(61, 154, 130, 0.15);
+  }
+
+  .nav-logo-text {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--deep-brown);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--warm-brown);
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+
+  .nav-links a:hover {
+    color: var(--sage-deep);
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--sage-green);
+    transition: width 0.3s ease;
+  }
+
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 12px 20px;
+    }
+
+    .navbar.scrolled {
+      padding: 10px 20px;
+    }
+
+    .nav-links {
+      display: none;
+    }
+
+    .nav-logo img {
+      height: 40px;
+    }
+
+    .nav-logo-text {
+      font-size: 16px;
+    }
+  }
+
+  /* 规划生成器 */
+  .planner-section {
+    background: linear-gradient(180deg, #F0FAF7 0%, #FFFFFF 100%);
+  }
+
+  .planner-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .planner-form-card {
+    background: var(--paper);
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(61, 154, 130, 0.08);
+    position: sticky;
+    top: 100px;
+  }
+
+  .form-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 20px;
+    color: var(--deep-brown);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-label {
+    display: block;
+    font-size: 14px;
+    color: var(--deep-brown);
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .form-input,
+  .form-select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #E8F0EC;
+    border-radius: 12px;
+    font-size: 14px;
+    color: var(--ink);
+    background: white;
+    transition: all 0.3s ease;
+    font-family: 'Noto Sans SC', sans-serif;
+  }
+
+  .form-input:focus,
+  .form-select:focus {
+    outline: none;
+    border-color: var(--sage-green);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(86, 184, 158, 0.15);
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .form-hint {
+    font-size: 12px;
+    color: var(--warm-brown);
+    margin-top: 6px;
+  }
+
+  .generate-btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, var(--sage-deep), var(--sage-green));
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+    font-family: 'Noto Sans SC', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .generate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(61, 154, 130, 0.3);
+  }
+
+  .generate-btn:active {
+    transform: translateY(0);
+  }
+
+  /* 规划结果区 */
+  .planner-result {
+    background: var(--paper);
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(61, 154, 130, 0.08);
+    min-height: 500px;
+  }
+
+  .result-placeholder {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--warm-brown);
+  }
+
+  .result-placeholder .icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+  }
+
+  .result-placeholder h4 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 20px;
+    color: var(--deep-brown);
+    margin-bottom: 12px;
+  }
+
+  .result-placeholder p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  /* 规划结果头部 */
+  .result-header {
+    padding-bottom: 20px;
+    margin-bottom: 24px;
+    border-bottom: 2px dashed var(--cream-deep);
+  }
+
+  .result-header h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    color: var(--deep-brown);
+    margin-bottom: 8px;
+  }
+
+  .result-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .result-meta-item {
+    padding: 4px 12px;
+    background: var(--cream);
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--warm-brown);
+  }
+
+  .result-meta-item strong {
+    color: var(--sage-deep);
+  }
+
+  /* 时间维度切换 */
+  .time-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    background: var(--cream);
+    padding: 6px;
+    border-radius: 12px;
+  }
+
+  .time-tab {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    font-size: 13px;
+    color: var(--warm-brown);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 500;
+  }
+
+  .time-tab.active {
+    background: white;
+    color: var(--sage-deep);
+    box-shadow: 0 2px 8px rgba(61, 154, 130, 0.1);
+  }
+
+  /* 年度规划概览 */
+  .year-overview {
+    display: grid;
+    gap: 20px;
+  }
+
+  .phase-card {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    border-left: 4px solid var(--sage-green);
+    box-shadow: 0 4px 15px rgba(61, 154, 130, 0.08);
+  }
+
+  .phase-card.phase2 {
+    border-left-color: var(--sky-deep);
+    box-shadow: 0 4px 15px rgba(74, 144, 184, 0.08);
+  }
+
+  .phase-card.phase3 {
+    border-left-color: var(--lavender);
+    box-shadow: 0 4px 15px rgba(197, 180, 227, 0.15);
+  }
+
+  .phase-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 16px;
+    color: var(--deep-brown);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .phase-time {
+    font-size: 12px;
+    color: var(--warm-brown);
+    margin-bottom: 12px;
+  }
+
+  .phase-goals {
+    list-style: none;
+  }
+
+  .phase-goals li {
+    padding: 4px 0;
+    padding-left: 18px;
+    position: relative;
+    font-size: 13px;
+    color: var(--ink);
+  }
+
+  .phase-goals li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--sage-green);
+    font-weight: bold;
+  }
+
+  /* 月度规划 */
+  .month-selector {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .month-btn {
+    padding: 6px 14px;
+    background: var(--cream);
+    border: 2px solid transparent;
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--warm-brown);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Noto Sans SC', sans-serif;
+  }
+
+  .month-btn.active {
+    background: rgba(86, 184, 158, 0.15);
+    border-color: var(--sage-green);
+    color: var(--sage-deep);
+    font-weight: 500;
+  }
+
+  .month-plan {
+    display: grid;
+    gap: 16px;
+  }
+
+  .subject-card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 3px 12px rgba(61, 154, 130, 0.06);
+  }
+
+  .subject-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .subject-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .subject-icon.politics {
+    background: rgba(255, 158, 170, 0.2);
+  }
+
+  .subject-icon.base {
+    background: rgba(86, 184, 158, 0.15);
+  }
+
+  .subject-icon.translation {
+    background: rgba(136, 216, 240, 0.2);
+  }
+
+  .subject-icon.encyclopedia {
+    background: rgba(197, 180, 227, 0.25);
+  }
+
+  .subject-name {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 15px;
+    color: var(--deep-brown);
+    font-weight: 600;
+  }
+
+  .subject-tasks {
+    list-style: none;
+  }
+
+  .subject-tasks li {
+    padding: 4px 0;
+    padding-left: 16px;
+    position: relative;
+    font-size: 13px;
+    color: var(--ink);
+  }
+
+  .subject-tasks li::before {
+    content: '•';
+    position: absolute;
+    left: 4px;
+    color: var(--sage-green);
+    font-size: 16px;
+  }
+
+  /* 周度规划 */
+  .week-selector {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .week-btn {
+    padding: 6px 12px;
+    background: var(--cream);
+    border: 1px solid var(--cream-deep);
+    border-radius: 8px;
+    font-size: 12px;
+    color: var(--warm-brown);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Noto Sans SC', sans-serif;
+  }
+
+  .week-btn.active {
+    background: var(--sage-deep);
+    border-color: var(--sage-deep);
+    color: white;
+  }
+
+  .week-plan {
+    display: grid;
+    gap: 10px;
+  }
+
+  .day-card {
+    background: var(--cream);
+    border-radius: 10px;
+    padding: 14px;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+
+  .day-label {
+    text-align: center;
+    padding: 8px;
+    background: white;
+    border-radius: 8px;
+  }
+
+  .day-label .day-name {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 14px;
+    color: var(--deep-brown);
+    font-weight: 600;
+  }
+
+  .day-label .day-num {
+    font-size: 11px;
+    color: var(--warm-brown);
+    margin-top: 2px;
+  }
+
+  .day-tasks {
+    font-size: 12px;
+    line-height: 1.8;
+    color: var(--ink);
+  }
+
+  .day-tasks .task-item {
+    display: flex;
+    gap: 6px;
+    padding: 2px 0;
+  }
+
+  .day-tasks .task-tag {
+    display: inline-block;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+
+  .tag-politics {
+    background: rgba(255, 158, 170, 0.18);
+    color: var(--rose);
+  }
+
+  .tag-base {
+    background: rgba(86, 184, 158, 0.15);
+    color: var(--sage-deep);
+  }
+
+  .tag-trans {
+    background: rgba(136, 216, 240, 0.18);
+    color: #5E7A74;
+  }
+
+  .tag-encyclo {
+    background: rgba(197, 180, 227, 0.2);
+    color: var(--warm-brown);
+  }
+
+  /* 每日规划 */
+  .daily-plan {
+    background: var(--cream);
+    border-radius: 14px;
+    padding: 24px;
+  }
+
+  .daily-date {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 18px;
+    color: var(--deep-brown);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .daily-schedule {
+    display: grid;
+    gap: 12px;
+  }
+
+  .schedule-item {
+    display: grid;
+    grid-template-columns: 80px 1fr 60px;
+    gap: 12px;
+    align-items: center;
+    padding: 10px 14px;
+    background: white;
+    border-radius: 10px;
+  }
+
+  .schedule-time {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--sage-deep);
+  }
+
+  .schedule-content {
+    font-size: 13px;
+    color: var(--ink);
+  }
+
+  .schedule-duration {
+    font-size: 11px;
+    color: var(--warm-brown);
+    text-align: right;
+  }
+
+  .daily-total {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--cream-deep);
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--warm-brown);
+  }
+
+  .daily-total strong {
+    color: var(--sage-deep);
+  }
+
+  /* 导出按钮 */
+  .export-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px dashed var(--cream-deep);
+  }
+
+  .export-btn {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid var(--cream-deep);
+    background: var(--paper);
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--deep-brown);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Noto Sans SC', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .export-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(61, 154, 130, 0.1);
+  }
+
+  .export-btn.word:hover {
+    border-color: #2B579A;
+    color: #2B579A;
+    background: rgba(43, 87, 154, 0.05);
+  }
+
+  .export-btn.pdf:hover {
+    border-color: #D93025;
+    color: #D93025;
+    background: rgba(217, 48, 37, 0.05);
+  }
+
+  /* 响应式 */
+  @media (max-width: 900px) {
+    .planner-container {
+      grid-template-columns: 1fr;
+    }
+
+    .planner-form-card {
+      position: static;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .day-card {
+      grid-template-columns: 60px 1fr;
+    }
+
+    .schedule-item {
+      grid-template-columns: 70px 1fr;
+    }
+
+    .schedule-duration {
+      display: none;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- 顶部导航栏 -->
+<nav class="navbar" id="navbar">
+  <a href="#top" class="nav-logo">
+    <img src="logo.jpg" alt="锦鲤学姐Ivy">
+    <span class="nav-logo-text">锦鲤学姐Ivy</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#timeline">备考规划</a></li>
+    <li><a href="#planner">生成器</a></li>
+    <li><a href="#schools">院校推荐</a></li>
+    <li><a href="#career">就业前景</a></li>
+    <li><a href="#skills">技能树</a></li>
+    <li><a href="#tips">备考技巧</a></li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero paper-texture" id="top">
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge">🐠 锦鲤学姐Ivy亲制 · 好运加成</div>
+      <h1 class="hero-title">
+        MTI翻译硕士<br>
+        <span>全规划手册</span>
+      </h1>
+      <p class="hero-subtitle">
+        从备考到就业，从零开始带你玩转翻译硕士。<br>
+        锦鲤学姐用亲身经历，为你铺好每一步路。<br>
+        愿你落笔生花，译见未来，好运连连。🍀
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number">3</div>
+          <div class="stat-label">备考阶段</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">院校推荐</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">5</div>
+          <div class="stat-label">就业方向</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">∞</div>
+          <div class="stat-label">未来可能</div>
+        </div>
+      </div>
+      <div class="cta-buttons">
+        <a href="#timeline" class="btn btn-primary">
+          开始规划 →
+        </a>
+        <a href="#tips" class="btn btn-secondary">
+          备考技巧
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="avatar-section">
+        <div class="avatar">🐠</div>
+        <div class="avatar-info">
+          <h3>锦鲤学姐Ivy</h3>
+          <p>MTI上岸导师 · 好运传递者</p>
+        </div>
+      </div>
+      <p class="学姐-quote">
+        翻译这条路，从来不是一蹴而就的。但只要你愿意走，每一步都算数。我走过的弯路，希望你们不用再走一遍。关注我，接上岸好运！
+      </p>
+      <div class="tags">
+        <span class="tag highlight">CATTI一级</span>
+        <span class="tag">985高校毕业</span>
+        <span class="tag">自由译者</span>
+        <span class="tag">年入30W+</span>
+        <span class="tag highlight">MTI锦鲤导师</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 备考时间线 -->
+<section class="timeline-section" id="timeline">
+  <div class="section-inner">
+    <div class="section-header scroll-reveal">
+      <div class="section-label">STUDY PLAN</div>
+      <h2 class="section-title">备考时间轴</h2>
+      <p class="section-desc">三阶段科学规划，让你的每一分钟都有价值</p>
+    </div>
+
+    <div class="timeline">
+      <!-- 第一阶段 -->
+      <div class="timeline-item scroll-reveal">
+        <div class="timeline-content">
+          <span class="timeline-phase">第一阶段</span>
+          <h3 class="timeline-title">基础夯实期</h3>
+          <div class="timeline-time">📅 3月 - 6月</div>
+          <ul class="timeline-list">
+            <li>每天背诵专八/GRE词汇100+，反复循环</li>
+            <li>系统学习语法知识，夯实基础</li>
+            <li>每日精读经济学人/纽约时报外刊</li>
+            <li>开始接触翻译基础理论，了解翻译技巧</li>
+            <li>确定目标院校，收集真题和参考书目</li>
+            <li>关注热词积累，每日China Daily热词</li>
+          </ul>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+
+      <!-- 第二阶段 -->
+      <div class="timeline-item scroll-reveal">
+        <div class="timeline-content">
+          <span class="timeline-phase">第二阶段</span>
+          <h3 class="timeline-title">黄金提升期</h3>
+          <div class="timeline-time">📅 7月 - 10月</div>
+          <ul class="timeline-list">
+            <li>每天2小时翻译练习（英译汉+汉译英）</li>
+            <li>钻研目标院校真题，摸清出题规律</li>
+            <li>系统背诵翻译词条，每日30个CE/EC</li>
+            <li>梳理百科知识核心考点，建立知识框架</li>
+            <li>启动政治复习，跟课+刷题同步进行</li>
+            <li>每周1-2篇英语作文和大作文练习</li>
+            <li>养成固定作息，保持高效学习节奏</li>
+          </ul>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+
+      <!-- 第三阶段 -->
+      <div class="timeline-item scroll-reveal">
+        <div class="timeline-content">
+          <span class="timeline-phase">第三阶段</span>
+          <h3 class="timeline-title">冲刺收尾期</h3>
+          <div class="timeline-time">📅 11月 - 12月</div>
+          <ul class="timeline-list">
+            <li>复盘所有错题，查漏补缺</li>
+            <li>打磨写作模板，形成自己的风格</li>
+            <li>每周全真模拟考试，严格按照考试时间</li>
+            <li>合理分配答题时间，适应考试节奏</li>
+            <li>政治冲刺背诵，时政热点梳理</li>
+            <li>调整心态和作息，保持最佳状态</li>
+            <li>准备复试材料，提前了解复试流程</li>
+          </ul>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <p style="color: var(--warm-brown); font-size: 14px;">
+        💡 <strong>锦鲤学姐小贴士：</strong>翻译是一门实践的艺术，光看不练假把式。坚持"翻-改-复盘-积累-再翻"的循环，你一定会看到进步！锦鲤护体，逢考必过~ 🐠
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 院校推荐 -->
+<section class="schools-section" id="schools">
+  <div class="section-inner">
+    <div class="section-header scroll-reveal">
+      <div class="section-label">SCHOOL GUIDE</div>
+      <h2 class="section-title">院校选择指南</h2>
+      <p class="section-desc">不同梯队院校推荐，找到最适合你的那一个</p>
+    </div>
+
+    <div class="school-tiers">
+      <!-- S级 -->
+      <div class="tier-card scroll-reveal">
+        <div class="tier-header">
+          <div class="tier-badge s">S</div>
+          <div class="tier-info">
+            <h3>顶尖学府 · 梦校梯队</h3>
+            <p>⭐⭐⭐⭐⭐ 难度极高，适合基础扎实、冲顶的同学</p>
+          </div>
+        </div>
+        <div class="school-list">
+          <div class="school-item">北京大学</div>
+          <div class="school-item">北京外国语大学</div>
+          <div class="school-item">上海外国语大学</div>
+          <div class="school-item">复旦大学</div>
+          <div class="school-item">上海交通大学</div>
+          <div class="school-item">北京航空航天大学</div>
+        </div>
+      </div>
+
+      <!-- A级 -->
+      <div class="tier-card scroll-reveal">
+        <div class="tier-header">
+          <div class="tier-badge a">A</div>
+          <div class="tier-info">
+            <h3>实力院校 · 高性价比</h3>
+            <p>⭐⭐⭐⭐ 难度中上，专业实力强，就业有保障</p>
+          </div>
+        </div>
+        <div class="school-list">
+          <div class="school-item">外交学院</div>
+          <div class="school-item">对外经济贸易大学</div>
+          <div class="school-item">广东外语外贸大学</div>
+          <div class="school-item">北京第二外国语学院</div>
+          <div class="school-item">天津外国语大学</div>
+          <div class="school-item">大连外国语大学</div>
+          <div class="school-item">四川外国语大学</div>
+          <div class="school-item">西安外国语大学</div>
+          <div class="school-item">黑龙江大学</div>
+          <div class="school-item">华东师范大学</div>
+        </div>
+      </div>
+
+      <!-- B级 -->
+      <div class="tier-card scroll-reveal">
+        <div class="tier-header">
+          <div class="tier-badge b">B</div>
+          <div class="tier-info">
+            <h3>稳妥之选 · 上岸友好</h3>
+            <p>⭐⭐⭐ 难度适中，求稳上岸的好选择</p>
+          </div>
+        </div>
+        <div class="school-list">
+          <div class="school-item">浙江外国语学院</div>
+          <div class="school-item">中国传媒大学</div>
+          <div class="school-item">南开大学</div>
+          <div class="school-item">中山大学</div>
+          <div class="school-item">湖南大学</div>
+          <div class="school-item">苏州大学</div>
+          <div class="school-item">暨南大学</div>
+          <div class="school-item">南京师范大学</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 40px; padding: 24px; background: rgba(255, 158, 170, 0.12); border-radius: 12px; border-left: 4px solid var(--rose);">
+      <p style="color: var(--deep-brown); font-size: 14px;">
+        🌸 <strong>锦鲤学姐择校建议：</strong>选择比努力更重要！一定要结合自身基础、职业规划、地域偏好综合考虑。建议去目标院校官网查看往年录取名单、报录比、真题题型，找到最匹配自己的学校。相信自己的选择，锦鲤保佑你一战成硕！🐟
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 就业前景 -->
+<section class="career-section" id="career">
+  <div class="section-inner">
+    <div class="section-header scroll-reveal">
+      <div class="section-label">CAREER PATH</div>
+      <h2 class="section-title">就业方向一览</h2>
+      <p class="section-desc">翻译硕士的出路，比你想象的更广阔</p>
+    </div>
+
+    <div class="career-grid">
+      <div class="career-card scroll-reveal">
+        <div class="career-icon">📝</div>
+        <h4>专职翻译</h4>
+        <div class="salary">8-25万 / 年</div>
+        <p>翻译公司全职译员、企业内部翻译、自由译者。资深译员或小语种方向可达20万+，同传更是日薪过万不是梦。</p>
+      </div>
+
+      <div class="career-card scroll-reveal">
+        <div class="career-icon">🏢</div>
+        <h4>外企/跨国公司</h4>
+        <div class="salary">12-30万 / 年</div>
+        <p>从事商务沟通、国际业务、外贸、本地化等岗位。语言+专业背景的复合型人才最受欢迎，晋升空间大。</p>
+      </div>
+
+      <div class="career-card scroll-reveal">
+        <div class="career-icon">🏛️</div>
+        <h4>公务员/事业单位</h4>
+        <div class="salary">10-20万 / 年</div>
+        <p>外交部、商务部、海关、文旅部门、外事办等。工作稳定体面，社会地位高，适合追求安稳的同学。</p>
+      </div>
+
+      <div class="career-card scroll-reveal">
+        <div class="career-icon">🎓</div>
+        <h4>教育行业</h4>
+        <div class="salary">8-25万 / 年</div>
+        <p>高校教师、培训机构讲师、在线教育名师。热爱教学的同学可以考虑，时间相对自由，假期多。</p>
+      </div>
+
+      <div class="career-card scroll-reveal">
+        <div class="career-icon">🌐</div>
+        <h4>跨境电商/互联网</h4>
+        <div class="salary">15-40万 / 年</div>
+        <p>跨境运营、海外市场、国际化产品。互联网行业薪资高、成长快，适合想拥抱变化的同学。</p>
+      </div>
+
+      <div class="career-card scroll-reveal">
+        <div class="career-icon">✈️</div>
+        <h4>国际组织/NGO</h4>
+        <div class="salary">15-35万 / 年</div>
+        <p>联合国、欧盟、各类国际组织。有机会派驻海外，视野开阔，适合有国际情怀的同学。</p>
+      </div>
+    </div>
+
+    <!-- 薪资概览 -->
+    <div class="salary-overview scroll-reveal">
+      <div class="salary-item">
+        <h5>应届生起薪</h5>
+        <div class="amount">8-12K<span class="unit">/月</span></div>
+      </div>
+      <div class="salary-item">
+        <div class="amount">10-18万<span class="unit">/年</span></div>
+        <h5>工作1-3年</h5>
+      </div>
+      <div class="salary-item">
+        <div class="amount">20-30万<span class="unit">/年</span></div>
+        <h5>工作3-5年</h5>
+      </div>
+      <div class="salary-item">
+        <div class="amount">30万+<span class="unit">/年</span></div>
+        <h5>资深/管理岗</h5>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 技能树 -->
+<section class="skills-section" id="skills">
+  <div class="section-inner">
+    <div class="section-header scroll-reveal">
+      <div class="section-label">SKILL TREE</div>
+      <h2 class="section-title">必备技能树</h2>
+      <p class="section-desc">除了翻译本身，这些技能也能让你脱颖而出</p>
+    </div>
+
+    <div class="skills-container">
+      <div class="skill-category scroll-reveal">
+        <h4><span class="icon">🎯</span> 核心翻译能力</h4>
+        <div class="skill-items">
+          <span class="skill-tag">笔译能力</span>
+          <span class="skill-tag">口译基础</span>
+          <span class="skill-tag">视译能力</span>
+          <span class="skill-tag">同传入门</span>
+          <span class="skill-tag">术语管理</span>
+          <span class="skill-tag">本地化翻译</span>
+          <span class="skill-tag">翻译技术</span>
+        </div>
+      </div>
+
+      <div class="skill-category scroll-reveal">
+        <h4><span class="icon">🏆</span> 高含金量证书</h4>
+        <div class="skill-items">
+          <span class="skill-tag cert">CATTI三级</span>
+          <span class="skill-tag cert">CATTI二级</span>
+          <span class="skill-tag cert">CATTI一级</span>
+          <span class="skill-tag cert">上海高口</span>
+          <span class="skill-tag cert">专八</span>
+          <span class="skill-tag cert">雅思7.5+</span>
+          <span class="skill-tag cert">托福105+</span>
+        </div>
+      </div>
+
+      <div class="skill-category scroll-reveal">
+        <h4><span class="icon">💻</span> 工具与技术</h4>
+        <div class="skill-items">
+          <span class="skill-tag">Trados</span>
+          <span class="skill-tag">MemoQ</span>
+          <span class="skill-tag">Déjà Vu</span>
+          <span class="skill-tag">Wordfast</span>
+          <span class="skill-tag">术语库管理</span>
+          <span class="skill-tag">字幕翻译</span>
+          <span class="skill-tag">AI翻译工具</span>
+        </div>
+      </div>
+
+      <div class="skill-category scroll-reveal">
+        <h4><span class="icon">📚</span> 知识储备</h4>
+        <div class="skill-items">
+          <span class="skill-tag">百科知识</span>
+          <span class="skill-tag">中国文化</span>
+          <span class="skill-tag">西方文化</span>
+          <span class="skill-tag">政经知识</span>
+          <span class="skill-tag">法律基础</span>
+          <span class="skill-tag">科技常识</span>
+          <span class="skill-tag">商务知识</span>
+        </div>
+      </div>
+
+      <div class="skill-category scroll-reveal">
+        <h4><span class="icon">🌟</span> 软技能</h4>
+        <div class="skill-items">
+          <span class="skill-tag">快速学习</span>
+          <span class="skill-tag">跨文化交际</span>
+          <span class="skill-tag">沟通表达</span>
+          <span class="skill-tag">时间管理</span>
+          <span class="skill-tag">抗压能力</span>
+          <span class="skill-tag">团队协作</span>
+          <span class="skill-tag">项目管理</span>
+        </div>
+      </div>
+
+      <div class="skill-category scroll-reveal">
+        <h4><span class="icon">🚀</span> 加分技能</h4>
+        <div class="skill-items">
+          <span class="skill-tag">第二外语</span>
+          <span class="skill-tag">Python入门</span>
+          <span class="skill-tag">新媒体运营</span>
+          <span class="skill-tag">文案写作</span>
+          <span class="skill-tag">设计基础</span>
+          <span class="skill-tag">数据分析</span>
+          <span class="skill-tag">个人品牌</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 备考技巧 -->
+<section class="tips-section" id="tips">
+  <div class="section-inner">
+    <div class="section-header scroll-reveal">
+      <div class="section-label">STUDY TIPS</div>
+      <h2 class="section-title">学姐的备考技巧</h2>
+      <p class="section-desc">四科提分干货 + 通用备考心法，都是踩过坑才总结出来的</p>
+    </div>
+
+    <div class="tips-grid">
+      <!-- 翻译 -->
+      <div class="tip-card cat-trans">
+        <span class="tip-cat">翻译 · 提分</span>
+        <h5>📘 "翻—改—复盘"三步循环</h5>
+        <ul class="tip-list">
+          <li>先自己翻，不看参考译文，翻完再对照</li>
+          <li>找出差距：用词、句式、逻辑衔接逐条标注</li>
+          <li>优秀表达摘抄到积累本，按主题分类整理</li>
+          <li>一篇翻十遍，胜过十篇翻一遍</li>
+        </ul>
+        <div class="tip-note">💡 复盘时间要 ≥ 翻译时间，这才是翻译提分的关键。</div>
+      </div>
+
+      <div class="tip-card cat-trans">
+        <span class="tip-cat">翻译 · 词条</span>
+        <h5>📝 词条背诵的3个诀窍</h5>
+        <ul class="tip-list">
+          <li>按主题分类背：政经、文化、科技、法律</li>
+          <li>锁定热词来源：China Daily、蜜题翻硕</li>
+          <li>艾宾浩斯循环，先复习旧词条再背新的</li>
+        </ul>
+        <div class="tip-note">💡 词条是唯一能靠背拿满分的题，千万别丢分。</div>
+      </div>
+
+      <!-- 基英 -->
+      <div class="tip-card cat-base">
+        <span class="tip-cat">基英 · 词汇</span>
+        <h5>📗 单词记忆：词根词缀 + 遗忘曲线</h5>
+        <ul class="tip-list">
+          <li>每天100个，用不背单词 / 墨墨APP打卡</li>
+          <li>词根词缀法：记一个词根，串起一串单词</li>
+          <li>熟词僻义重点记，专八 / GRE词汇要过关</li>
+        </ul>
+        <div class="tip-note">💡 单词至少背3轮，复习永远比背新词更重要。</div>
+      </div>
+
+      <div class="tip-card cat-base">
+        <span class="tip-cat">基英 · 阅读改错</span>
+        <h5>📗 阅读提速与改错提分细节</h5>
+        <ul class="tip-list">
+          <li>阅读先掐时间做，再精读分析长难句</li>
+          <li>改错按考点归类：冠词、介词、时态、搭配</li>
+          <li>外刊精读每周2-3篇，积累地道表达</li>
+        </ul>
+        <div class="tip-note">💡 阅读错题一定回原文找依据，别凭感觉选。</div>
+      </div>
+
+      <!-- 政治 -->
+      <div class="tip-card cat-politics">
+        <span class="tip-cat">政治 · 选择</span>
+        <h5>📕 选择题的 keywords 法则</h5>
+        <ul class="tip-list">
+          <li>腿姐keywords法：抓题干关键词快速定位</li>
+          <li>1000题至少刷3遍，错题就是宝藏</li>
+          <li>史纲按时间线梳理，毛中特抓重点章节</li>
+        </ul>
+        <div class="tip-note">💡 选择题是政治拉分关键，目标稳定在40分+。</div>
+      </div>
+
+      <div class="tip-card cat-politics">
+        <span class="tip-cat">政治 · 大题</span>
+        <h5>📕 大题背诵框架法</h5>
+        <ul class="tip-list">
+          <li>肖四肖八大题背熟，每套至少过5遍</li>
+          <li>背关键词 + 框架，千万别死记硬背</li>
+          <li>马原原理 + 答题模板提前准备到位</li>
+        </ul>
+        <div class="tip-note">💡 考前一周政治提分最快，一定要坚持住。</div>
+      </div>
+
+      <!-- 百科 -->
+      <div class="tip-card cat-encyclo">
+        <span class="tip-cat">百科 · 名词解释</span>
+        <h5>📙 名词解释万能公式</h5>
+        <ul class="tip-list">
+          <li>公式：谁 + 什么时候 + 做了什么 + 什么影响</li>
+          <li>关键词记忆法，理解了才更容易记住</li>
+          <li>按文化 / 历史 / 政治 / 经济分类背诵</li>
+        </ul>
+        <div class="tip-note">💡 百科考的是广度，多积累就对了，不用怕。</div>
+      </div>
+
+      <div class="tip-card cat-encyclo">
+        <span class="tip-cat">百科 · 大作文</span>
+        <h5>📙 大作文素材库搭建</h5>
+        <ul class="tip-list">
+          <li>按话题准备素材：科技 / 文化 / 环保 / 教育</li>
+          <li>关注人民日报评论、半月谈积累观点</li>
+          <li>每周写1篇，严格计时60分钟800字</li>
+        </ul>
+        <div class="tip-note">💡 字迹一定要写工整，卷面分真的很重要。</div>
+      </div>
+
+      <!-- 通用 -->
+      <div class="tip-card cat-general">
+        <span class="tip-cat">通用 · 真题</span>
+        <h5>📚 真题的三轮使用法</h5>
+        <ul class="tip-list">
+          <li>一轮摸底：了解题型分布和整体难度</li>
+          <li>二轮精做：研究出题规律和院校偏好</li>
+          <li>三轮模考：严格计时，找考试节奏</li>
+        </ul>
+        <div class="tip-note">💡 目标院校真题优先级最高，别贪多嚼不烂。</div>
+      </div>
+
+      <div class="tip-card cat-general">
+        <span class="tip-cat">通用 · 复盘</span>
+        <h5>📚 错题本的正确用法</h5>
+        <ul class="tip-list">
+          <li>不只抄题，要写清错因和正确思路</li>
+          <li>按知识点 / 题型分类，方便查漏补缺</li>
+          <li>每周固定复盘一次，考前集中过一遍</li>
+        </ul>
+        <div class="tip-note">💡 错题本比盲目刷新题有价值得多。</div>
+      </div>
+
+      <div class="tip-card cat-general">
+        <span class="tip-cat">通用 · 时间管理</span>
+        <h5>⏰ 碎片时间的高效利用</h5>
+        <ul class="tip-list">
+          <li>通勤 / 排队：背单词、听外刊、刷词条</li>
+          <li>睡前30分钟：过一遍当天的错题和笔记</li>
+          <li>用番茄钟：25分钟专注 + 5分钟休息</li>
+        </ul>
+        <div class="tip-note">💡 每天多挤出1小时，一年就是365个小时。</div>
+      </div>
+
+      <div class="tip-card cat-general">
+        <span class="tip-cat">通用 · 心态</span>
+        <h5>🌸 心态调整：稳住就能赢</h5>
+        <ul class="tip-list">
+          <li>不和别人比进度，只和昨天的自己比</li>
+          <li>状态差时允许休息，别硬扛到崩溃</li>
+          <li>保持规律作息，考前一周千万别熬夜</li>
+        </ul>
+        <div class="tip-note">💡 考研是场马拉松，坚持到最后就赢了一半。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 个性化规划生成器 -->
+<section class="planner-section" id="planner">
+  <div class="section-inner">
+    <div class="section-header scroll-reveal">
+      <div class="section-label">PERSONALIZED PLAN</div>
+      <h2 class="section-title">个性化全年规划生成器</h2>
+      <p class="section-desc">输入你的基础信息，一键生成专属MTI备考规划</p>
+    </div>
+
+    <div class="planner-container">
+      <!-- 左侧表单 -->
+      <div class="planner-form-card scroll-reveal">
+        <div class="form-title">
+          <span>📝</span>
+          填写你的信息
+        </div>
+
+        <form id="plannerForm">
+          <div class="form-group">
+            <label class="form-label">昵称</label>
+            <input type="text" class="form-input" id="nickname" placeholder="比如：小翻硕" value="小翻硕">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">目标院校</label>
+            <select class="form-select" id="targetSchool">
+              <option value="top">顶尖学府（北外/上外/北大等）</option>
+              <option value="high" selected>重点院校（广外/外交学院/对外经贸等）</option>
+              <option value="medium">普通院校（省属重点等）</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">报考方向</label>
+            <select class="form-select" id="direction">
+              <option value="translation" selected>英语笔译</option>
+              <option value="interpretation">英语口译</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">英语基础</label>
+              <select class="form-select" id="englishLevel">
+                <option value="weak">四级水平</option>
+                <option value="medium" selected>六级/专四水平</option>
+                <option value="strong">专八/雅思7+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">是否跨考</label>
+              <select class="form-select" id="isCross">
+                <option value="yes">是</option>
+                <option value="no" selected">否（英专）</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">备考开始月</label>
+              <select class="form-select" id="startMonth">
+                <option value="1">1月</option>
+                <option value="2">2月</option>
+                <option value="3" selected>3月</option>
+                <option value="4">4月</option>
+                <option value="5">5月</option>
+                <option value="6">6月</option>
+                <option value="7">7月</option>
+                <option value="8">8月</option>
+                <option value="9">9月</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">备考年份</label>
+              <select class="form-select" id="examYear">
+                <option value="2026">2026年底考试</option>
+                <option value="2027" selected>2027年底考试</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">每日可学习时长</label>
+            <select class="form-select" id="dailyHours">
+              <option value="4">4小时以内</option>
+              <option value="6" selected">6小时左右</option>
+              <option value="8">8小时左右</option>
+              <option value="10">10小时以上</option>
+            </select>
+            <div class="form-hint">💡 建议循序渐进，后期可适当增加时长</div>
+          </div>
+
+          <button type="button" class="generate-btn" id="generateBtn">
+            <span>✨</span>
+            生成我的专属规划
+          </button>
+        </form>
+      </div>
+
+      <!-- 右侧结果 -->
+      <div class="planner-result scroll-reveal" id="plannerResult">
+        <div class="result-placeholder" id="resultPlaceholder">
+          <div class="icon">🗓️</div>
+          <h4>你的专属规划即将生成</h4>
+          <p>填写左侧信息，点击生成按钮<br>即可获得从年到日的详细备考规划<br>包含政治 + 三门专业课全覆盖</p>
+        </div>
+
+        <div id="resultContent" style="display: none;">
+          <!-- 结果头部 -->
+          <div class="result-header">
+            <h3 id="resultTitle">小翻硕的MTI备考规划</h3>
+            <div class="result-meta">
+              <div class="result-meta-item">目标：<strong id="metaSchool">重点院校</strong></div>
+              <div class="result-meta-item">方向：<strong id="metaDirection">英语笔译</strong></div>
+              <div class="result-meta-item">时长：<strong id="metaDuration">10个月</strong></div>
+              <div class="result-meta-item">每日：<strong id="metaHours">6小时</strong></div>
+            </div>
+          </div>
+
+          <!-- 导出按钮 -->
+          <div class="export-buttons">
+            <button class="export-btn word" id="exportWordBtn">
+              <span>📄</span>
+              导出 Word 文档
+            </button>
+            <button class="export-btn pdf" id="exportPdfBtn">
+              <span>📑</span>
+              导出 PDF 文档
+            </button>
+          </div>
+
+          <!-- 时间维度切换 -->
+          <div class="time-tabs">
+            <button class="time-tab active" data-view="year">📅 年度概览</button>
+            <button class="time-tab" data-view="month">📆 月度规划</button>
+            <button class="time-tab" data-view="week">📋 周度安排</button>
+            <button class="time-tab" data-view="day">⏰ 每日任务</button>
+          </div>
+
+          <!-- 年度视图 -->
+          <div id="yearView" class="time-view">
+            <div class="year-overview" id="yearOverview"></div>
+          </div>
+
+          <!-- 月度视图 -->
+          <div id="monthView" class="time-view" style="display: none;">
+            <div class="month-selector" id="monthSelector"></div>
+            <div class="month-plan" id="monthPlan"></div>
+          </div>
+
+          <!-- 周度视图 -->
+          <div id="weekView" class="time-view" style="display: none;">
+            <div class="week-selector" id="weekSelector"></div>
+            <div class="week-plan" id="weekPlan"></div>
+          </div>
+
+          <!-- 每日视图 -->
+          <div id="dayView" class="time-view" style="display: none;">
+            <div class="week-selector" id="daySelector"></div>
+            <div class="daily-plan" id="dailyPlan"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 学姐寄语 -->
+<section class="message-section">
+  <div class="section-inner">
+    <div class="section-header scroll-reveal">
+      <div class="section-label">A MESSAGE FROM ME</div>
+      <h2 class="section-title">写在最后</h2>
+    </div>
+
+    <div class="message-content scroll-reveal">
+      <p>亲爱的学弟学妹们：</p>
+      <br>
+      <p>如果你正在考虑MTI，或者已经在备考的路上，我想告诉你——你做了一个很棒的选择。</p>
+      <br>
+      <p>翻译这条路可能不会让你大富大贵，但它会给你一双看世界的眼睛，一种连接不同文化的能力，一份用语言创造价值的成就感。</p>
+      <br>
+      <p>备考的日子可能会很辛苦，你可能会怀疑自己，可能会想要放弃。但请相信，那些你熬的夜、背的词、翻的稿子，都会在未来的某一天，以你意想不到的方式回馈给你。</p>
+      <br>
+      <p>记住，翻译是一场马拉松，不是百米冲刺。慢慢来，比较快。</p>
+      <br>
+      <p>愿你在翻译的世界里，找到属于自己的光。也愿锦鲤的好运，一直伴随着你。🐠✨</p>
+    </div>
+
+    <div class="scroll-reveal">
+      <div class="message-sign">—— 你的锦鲤学姐 Ivy</div>
+      <div class="message-date">2026年秋 · 好运传递中</div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>🐠 锦鲤学姐Ivy的MTI规划手册 · 愿每一位翻硕人都能得偿所愿，一战成硕</p>
+  <p style="margin-top: 8px; font-size: 12px;">内容仅供参考，具体请以官方信息为准 | Made with ♡ by 锦鲤学姐Ivy</p>
+</footer>
+
+<!-- 回到顶部 -->
+<div class="back-to-top" id="backToTop">
+  ↑
+</div>
+
+<script>
+  // 滚动动画
+  const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+
+  const revealOnScroll = () => {
+    scrollRevealElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      if (rect.top < windowHeight - 100) {
+        el.classList.add('revealed');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+
+  // 导航栏滚动效果
+  const navbar = document.getElementById('navbar');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  // 回到顶部
+  const backToTop = document.getElementById('backToTop');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // 平滑滚动
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // ==================== MTI 规划生成器 ====================
+  const monthNames = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
+  const weekDays = ['周一', '周二', '周三', '周四', '周五', '周六', '周日'];
+
+  let currentPlan = null;
+  let currentMonthIndex = 0;
+  let currentWeekIndex = 0;
+  let currentDayIndex = 0;
+
+  // 生成规划
+  document.getElementById('generateBtn').addEventListener('click', generatePlan);
+
+  function generatePlan() {
+    const nickname = document.getElementById('nickname').value || '小翻硕';
+    const targetSchool = document.getElementById('targetSchool').value;
+    const direction = document.getElementById('direction').value;
+    const englishLevel = document.getElementById('englishLevel').value;
+    const isCross = document.getElementById('isCross').value;
+    const startMonth = parseInt(document.getElementById('startMonth').value);
+    const examYear = parseInt(document.getElementById('examYear').value);
+    const dailyHours = parseInt(document.getElementById('dailyHours').value);
+
+    // 计算备考月数（考试在12月）
+    const examMonth = 12;
+    let totalMonths;
+    if (startMonth <= examMonth) {
+      totalMonths = examMonth - startMonth + 1;
+    } else {
+      totalMonths = (12 - startMonth + 1) + examMonth;
+    }
+
+    // 生成月份列表
+    const months = [];
+    let m = startMonth;
+    let y = examYear;
+    if (startMonth > examMonth) y = examYear - 1;
+    for (let i = 0; i < totalMonths; i++) {
+      months.push({
+        year: y,
+        month: m,
+        name: `${y}年${monthNames[m - 1]}`
+      });
+      m++;
+      if (m > 12) {
+        m = 1;
+        y++;
+      }
+    }
+
+    // 确定阶段划分
+    const phases = calculatePhases(totalMonths, targetSchool, englishLevel, isCross);
+
+    // 生成每月规划
+    const monthlyPlans = months.map((month, idx) => {
+      const phase = getPhaseForMonth(idx, phases);
+      return generateMonthPlan(month, idx, phase, targetSchool, direction, englishLevel, isCross, dailyHours);
+    });
+
+    // 生成周度规划（取第一个月的4周）
+    const weeklyPlans = generateWeekPlans(monthlyPlans[0], dailyHours);
+
+    // 生成每日规划（取第一周的7天）
+    const dailyPlans = generateDailyPlans(weeklyPlans[0], dailyHours);
+
+    currentPlan = {
+      nickname,
+      targetSchool,
+      direction,
+      englishLevel,
+      isCross,
+      startMonth,
+      examYear,
+      dailyHours,
+      totalMonths,
+      months,
+      phases,
+      monthlyPlans,
+      weeklyPlans,
+      dailyPlans
+    };
+
+    renderResult();
+  }
+
+  // 计算阶段
+  function calculatePhases(totalMonths, targetSchool, level, isCross) {
+    // 根据难度调整阶段比例
+    let baseRatio = totalMonths <= 6 ? [0.35, 0.45, 0.2] : [0.4, 0.4, 0.2];
+    
+    // 基础弱的话基础阶段更长
+    if (level === 'weak' || isCross === 'yes') {
+      baseRatio = [0.45, 0.4, 0.15];
+    }
+
+    const phase1Months = Math.max(2, Math.round(totalMonths * baseRatio[0]));
+    const phase2Months = Math.max(2, Math.round(totalMonths * baseRatio[1]));
+    const phase3Months = Math.max(1, totalMonths - phase1Months - phase2Months);
+
+    return [
+      { name: '基础夯实阶段', months: phase1Months, color: 'phase1', icon: '🌱', desc: '打基础、建框架、养习惯' },
+      { name: '强化提升阶段', months: phase2Months, color: 'phase2', icon: '🔥', desc: '攻真题、提能力、补短板' },
+      { name: '冲刺模考阶段', months: phase3Months, color: 'phase3', icon: '🚀', desc: '刷模拟、调状态、稳发挥' }
+    ];
+  }
+
+  function getPhaseForMonth(monthIdx, phases) {
+    let count = 0;
+    for (let i = 0; i < phases.length; i++) {
+      count += phases[i].months;
+      if (monthIdx < count) return { ...phases[i], index: i };
+    }
+    return { ...phases[phases.length - 1], index: phases.length - 1 };
+  }
+
+  // 生成月度规划
+  function generateMonthPlan(month, monthIdx, phase, targetSchool, direction, level, isCross, hours) {
+    const intensity = targetSchool === 'top' ? 'high' : targetSchool === 'high' ? 'medium' : 'low';
+    
+    // 政治规划
+    const politics = generatePoliticsPlan(phase.index, monthIdx, hours);
+    
+    // 翻译硕士英语
+    const baseEnglish = generateBaseEnglishPlan(phase.index, level, isCross);
+    
+    // 翻译基础
+    const translation = generateTranslationPlan(phase.index, direction, intensity);
+    
+    // 百科知识
+    const encyclopedia = generateEncyclopediaPlan(phase.index, intensity);
+
+    return {
+      month,
+      phase,
+      politics,
+      baseEnglish,
+      translation,
+      encyclopedia
+    };
+  }
+
+  function generatePoliticsPlan(phase, monthIdx, hours) {
+    const plans = [
+      // 基础阶段（7月前）
+      [
+        { 
+          tasks: [
+            '📚 入门：徐涛强化班马原部分，配合核心考案',
+            '✅ 肖秀荣1000题马原部分一刷（每天15-20题）',
+            '📝 整理错题本，标注错误原因和知识点',
+            '🎯 目标：马原哲学部分理解透彻，正确率60%+',
+            '💡 学姐碎碎念：政治不用开始太早，但马原一定要理解！'
+          ], 
+          hours: '0.5-1h',
+          books: '《肖秀荣1000题》《核心考案》',
+          tips: '徐涛的课很有趣，但别光听不练！'
+        },
+        { 
+          tasks: [
+            '📚 徐涛强化班：毛中特+史纲部分',
+            '✅ 1000题对应章节二刷，错题重点标记',
+            '🗂️ 建立知识框架图（尤其史纲时间线）',
+            '📰 开始关注时政新闻（每天5分钟）',
+            '🎯 目标：1000题一刷完成，选择题正确率70%'
+          ], 
+          hours: '1-1.5h',
+          books: '《肖秀荣1000题》《徐涛核心考案》',
+          tips: '史纲要按时间线梳理，毛中特要抓重点！'
+        },
+        { 
+          tasks: [
+            '📚 完成思修+形势与政策部分',
+            '✅ 1000题三刷错题部分',
+            '🧠 背诵笔记/小黄书开始过一遍',
+            '📰 时政热点开始积累（腿姐/徐涛整理）',
+            '🎯 目标：选择题稳定在35分+',
+            '💡 学姐碎碎念：1000题至少刷3遍！错题是宝藏'
+          ], 
+          hours: '1-1.5h',
+          books: '《腿姐背诵手册》《肖秀荣知识点提要》',
+          tips: '错题本比新题更重要！'
+        }
+      ],
+      // 强化阶段（7-10月）
+      [
+        { 
+          tasks: [
+            '📚 腿姐技巧班选择题部分',
+            '✅ 1000题四刷，重点攻克易错题',
+            '🧠 腿姐背诵手册上篇熟读',
+            '📰 时政：每月时政热点整理',
+            '🎯 目标：选择题稳定38-40分+',
+            '💡 学姐碎碎念：选择题是政治拉分关键！'
+          ], 
+          hours: '1.5-2h',
+          books: '《腿姐背诵手册》《腿姐30天70分》',
+          tips: '腿姐的keywords法则超好用！'
+        },
+        { 
+          tasks: [
+            '📚 腿姐冲刺班+徐涛刷题班',
+            '✅ 各种模拟卷选择题狂刷（每天1套）',
+            '🧠 背诵手册下篇开始背诵',
+            '📰 时政：全年时政梳理完成',
+            '🎯 目标：选择题40分+，大题开始准备素材',
+            '💡 学姐碎碎念：模拟卷选择题保持手感！'
+          ], 
+          hours: '1.5-2h',
+          books: '肖八、腿四、徐六、米六',
+          tips: '模拟卷只做选择就够，大题不用急！'
+        },
+        { 
+          tasks: [
+            '📚 肖八选择题精做+复盘',
+            '✅ 错题本全部过一遍',
+            '🧠 大题开始背素材（马原原理+答题模板）',
+            '📰 时政热点冲刺背诵',
+            '🎯 目标：选择题42分+，大题框架成型',
+            '💡 学姐碎碎念：肖八选择要吃透，每道题都要会！'
+          ], 
+          hours: '2h',
+          books: '《肖秀荣8套卷》《腿姐冲刺背诵手册》',
+          tips: '肖八选择题至少刷2遍！'
+        }
+      ],
+      // 冲刺阶段（11-12月）
+      [
+        { 
+          tasks: [
+            '📚 肖四到手！选择题精做+背诵',
+            '📝 肖四前两套大题全背，后两套重点背',
+            '🧠 腿姐押题班+徐涛20题辅助',
+            '✅ 每天1套模拟卷保持手感',
+            '🎯 目标：大题有话可说，选择题稳定40+',
+            '💡 学姐碎碎念：肖四是救命稻草，一定要背熟！'
+          ], 
+          hours: '2.5-3h',
+          books: '《肖秀荣4套卷》《徐涛20题》',
+          tips: '大题背关键词+框架，别死记硬背！'
+        },
+        { 
+          tasks: [
+            '📝 肖四大题滚瓜烂熟，每套至少背5遍',
+            '📝 徐涛20题/腿姐10道题补充背诵',
+            '✅ 选择题错题最后复盘',
+            '⏰ 全真模拟：下午2-5点完整做一套',
+            '🎯 目标：政治75分+，选择题42+',
+            '💡 学姐碎碎念：最后一周政治提分最快！'
+          ], 
+          hours: '3-4h',
+          books: '肖四为主 + 各种押题卷',
+          tips: '考前一天把肖四大题再过一遍！'
+        }
+      ]
+    ];
+    return plans[phase][Math.min(monthIdx % 3, plans[phase].length - 1)];
+  }
+
+  function generateBaseEnglishPlan(phase, level, isCross) {
+    const plans = [
+      // 基础阶段
+      { 
+        tasks: [
+          '📖 单词：每天100个（专八如鱼得水+GRE词汇），用不背单词APP',
+          '📝 单词：艾宾浩斯遗忘曲线复习，前一天的必须回顾',
+          '📚 语法：专四语法1000题每天20题，系统梳理语法体系',
+          '📰 外刊精读：每天1篇经济学人，积累表达+长难句分析',
+          '📖 阅读：华研专八阅读每天1-2篇，先不追求速度',
+          '✍️ 写作：每天积累5个好词好句，建立素材本',
+          '🎯 目标：词汇量突破8000，语法盲区基本扫清',
+          '💡 学姐碎碎念：单词是地基，一定要坚持每天背！'
+        ], 
+        hours: '2-2.5h',
+        books: '《如鱼得水记单词》《专四语法1000题》《华研专八阅读》',
+        app: '不背单词、墨墨背单词、经济学人商论',
+        tips: '单词至少背3轮，复习比背新词更重要！'
+      },
+      // 强化阶段
+      { 
+        tasks: [
+          '📖 单词：专八+GRE词汇循环，重点掌握熟词僻义和搭配',
+          '📚 阅读：华研/星火专八阅读每天2-3篇，开始掐时间',
+          '📝 改错：华研专八改错1100题，每天1-2篇',
+          '🧩 完型：专八完型/三笔综合完型专项练习',
+          '✍️ 作文：每周写1篇大作文（专八/雅思写作）',
+          '📰 外刊：保持每周2-3篇精读，重点积累写作表达',
+          '🎯 目标：阅读正确率80%+，作文形成自己的模板',
+          '💡 学姐碎碎念：作文一定要自己写，光看不练假把式！'
+        ], 
+        hours: '1.5-2h',
+        books: '《星火专八阅读》《华研专八改错》《顾家北写作》',
+        app: 'China Daily、经济学人、FT中文网',
+        tips: '作文要批改！找学长学姐或用批改网！'
+      },
+      // 冲刺阶段
+      { 
+        tasks: [
+          '📖 单词：高频词重点复习，保持手感即可',
+          '📝 真题：目标院校真题套卷练习，严格计时完成',
+          '✍️ 作文：模板最终定稿，每种话题都练过',
+          '📊 错题：所有错题复盘总结，查漏补缺',
+          '📰 外刊：每天1篇保持语感，不用精读',
+          '⏰ 模考：每周1次全真模拟，适应考试节奏',
+          '🎯 目标：基英成绩稳定在110分+',
+          '💡 学姐碎碎念：最后阶段重点是保持手感和心态！'
+        ], 
+        hours: '1-1.5h',
+        books: '目标院校真题、黄皮书基英真题',
+        tips: '考前一周把作文模板再过一遍！'
+      }
+    ];
+    return plans[phase];
+  }
+
+  function generateTranslationPlan(phase, direction, intensity) {
+    const baseTasks = [
+      // 基础阶段
+      { 
+        tasks: [
+          '📚 翻译入门：武峰十二天突破英汉翻译（配合网课）',
+          '📘 翻译理论：韩刚B2A译点通，学习90天攻克三笔',
+          '✍️ 练习：每天英译汉+汉译英各1段（三笔基础难度）',
+          '📝 词条：每天15个CE/EC词条背诵（蜜题翻硕APP）',
+          '🔥 热词：China Daily热词每日积累，关注蜜题翻硕公众号',
+          '📋 复盘：每篇翻译都要对比参考译文，整理优秀表达',
+          '📒 建库：建立自己的术语库和表达积累本（分类整理）',
+          '🎯 目标：掌握基本翻译技巧，能独立完成基础翻译',
+          '💡 学姐碎碎念：翻译一定要动笔！翻得再烂也要写！'
+        ], 
+        hours: '2-2.5h',
+        books: '《武峰十二天》《韩刚B2A译点通》《英汉翻译简明教程》',
+        app: '蜜题翻硕、每日英语听力',
+        tips: '前期建议用电脑打字，效率更高！'
+      },
+      // 强化阶段
+      { 
+        tasks: [
+          '✍️ 翻译练习：每天英译汉+汉译英各1篇（三笔/二笔难度）',
+          '📚 真题：研究目标院校真题，分析出题偏好（政经/文学/科技）',
+          '📝 词条：每天30个CE/EC，分类背诵，循环复习',
+          '🧠 技巧：跟着XXLIN1987徐老师公众号练汉译英',
+          '🔄 复盘：坚持"翻-改-复盘-积累-再翻"循环',
+          '📊 分类：政经/文学/科技/法律分类练习，对症下药',
+          direction === 'interpretation' ? '🎙️ 口译：加入交传/视译练习，每天30分钟' : '✨ 积累：优秀译文表达积累，建立自己的语料库',
+          '🎯 目标：三笔水平，翻译速度和质量明显提升',
+          '💡 学姐碎碎念：复盘的时间要等于甚至超过翻译时间！'
+        ], 
+        hours: '2.5-3h',
+        books: '黄皮书翻译真题、CATTI三笔二笔真题、《张培基散文》',
+        app: '蜜题翻硕、XXLIN1987公众号、译学点滴',
+        tips: '翻译不在多在于精，一篇翻十遍胜过十篇翻一遍！'
+      },
+      // 冲刺阶段
+      { 
+        tasks: [
+          '✍️ 保持手感：每天各1篇翻译，控制在考试时间内完成',
+          '📚 真题：目标院校真题反复精做，至少做3遍',
+          '📝 词条：高频词条冲刺背诵，重点抓目标院校偏好',
+          '⏰ 模考：每周1次全真模拟，严格计时3小时',
+          '📒 回顾：翻看自己的翻译错题本和表达积累本',
+          '🔥 热词：全年热词最后梳理，China Daily+蜜题热词',
+          direction === 'interpretation' ? '🎙️ 口译：模拟面试，交传练习，克服紧张' : '✨ 打磨：形成自己的翻译风格，减少翻译腔',
+          '🎯 目标：翻译基础120分+，词条尽量拿满分',
+          '💡 学姐碎碎念：词条是唯一能靠背拿满分的题，一定要抓住！'
+        ], 
+        hours: '2-2.5h',
+        books: '目标院校真题、黄皮书、词条红宝书',
+        app: '蜜题翻硕、词条背诵神器',
+        tips: '最后阶段一定要掐时间练习，适应考试节奏！'
+      }
+    ];
+    return baseTasks[phase];
+  }
+
+  function generateEncyclopediaPlan(phase, intensity) {
+    const plans = [
+      // 基础阶段
+      { 
+        tasks: [
+          '📚 入门：了解百科考试题型和范围（名词解释/选择/作文）',
+          '📖 阅读：黄皮书百科知识词条词典通读一遍',
+          '📝 积累：每天10个名词解释，用关键词记忆法',
+          '🌏 中国文化：中国文化要略每天读一章',
+          '🌍 西方文化：西方文化史入门，了解重要事件和人物',
+          '📰 时事：每天关注新闻热点，人民日报/新华社',
+          '✍️ 作文：开始积累作文素材（名人名言+事例）',
+          '🎯 目标：建立百科知识框架，积累500个名词解释',
+          '💡 学姐碎碎念：百科不要死记硬背，理解了更容易记！'
+        ], 
+        hours: '1-1.5h',
+        books: '《黄皮书百科知识词条词典》《中国文化要略》《西方文化史》',
+        app: '人民日报、新华社、蜜题百科',
+        tips: '名词解释用关键词法：谁+什么时候+干什么+影响'
+      },
+      // 强化阶段
+      { 
+        tasks: [
+          '📚 百科：系统梳理知识框架，按领域分类（文化/历史/政治/经济）',
+          '📝 名词解释：每天20个，分类背诵，用艾宾浩斯复习',
+          '📰 真题：研究目标院校百科真题，找出题规律和偏好',
+          '✍️ 应用文：学习各种应用文格式（倡议书/通知/报告等）',
+          '✍️ 大作文：每周写1篇，积累素材和万能模板',
+          '🎬 素材：关注人民日报评论、半月谈，积累作文观点',
+          '📊 分类：按政治/经济/文化/科技/法律等领域整理知识点',
+          '🎯 目标：百科知识覆盖80%考点，作文能稳定输出',
+          '💡 学姐碎碎念：百科考的是广度，多积累就对了！'
+        ], 
+        hours: '1.5-2h',
+        books: '黄皮书百科真题、《应用文写作》《高考满分作文》',
+        app: '人民日报评论、半月谈、纸条作文',
+        tips: '大作文可以按话题准备素材：科技/文化/环保/教育...'
+      },
+      // 冲刺阶段
+      { 
+        tasks: [
+          '📝 名词解释：冲刺背诵高频考点，重点抓目标院校偏好',
+          '✍️ 大作文：模板和素材最终整理，每个话题都有话说',
+          '📰 热点：全年热点话题预测和准备（科技/文化/社会）',
+          '📚 真题：反复研究真题，摸清出题规律和答题套路',
+          '✍️ 作文：每周2篇模拟练习，严格计时（60分钟800字）',
+          '📋 应用文：各种格式再过一遍，确保不失分',
+          '⏰ 模考：百科部分全真模拟，控制答题时间',
+          '🎯 目标：百科110分+，作文不跑题有深度',
+          '💡 学姐碎碎念：作文的字一定要写工整！卷面分很重要！'
+        ], 
+        hours: '1.5-2h',
+        books: '目标院校真题、百科热词总结、作文押题预测',
+        app: '人民日报评论、纸条、作文素材',
+        tips: '考前把所有应用文格式再过一遍！'
+      }
+    ];
+    return plans[phase];
+  }
+
+  // 生成周度规划
+  function generateWeekPlans(monthPlan, dailyHours) {
+    const weeks = [];
+    const dayTasksTemplate = [
+      // 周一到周五 - 高强度
+      { politics: ['政治网课/刷题'], baseEnglish: ['单词背诵', '阅读练习'], translation: ['英译汉练习', '词条背诵'], encyclopedia: ['百科知识积累'] },
+      { politics: ['政治刷题'], baseEnglish: ['单词复习', '语法/改错'], translation: ['汉译英练习', '翻译复盘'], encyclopedia: ['名词解释背诵'] },
+      { politics: ['政治网课/刷题'], baseEnglish: ['外刊精读', '作文素材'], translation: ['英译汉+汉译英'], encyclopedia: ['百科阅读'] },
+      { politics: ['错题复盘'], baseEnglish: ['单词背诵', '阅读练习'], translation: ['翻译练习', '词条复习'], encyclopedia: ['作文练习'] },
+      { politics: ['本周政治总结'], baseEnglish: ['本周英语总结'], translation: ['本周翻译复盘'], encyclopedia: ['本周百科总结'] },
+      // 周六 - 模考/强化
+      { politics: ['政治套卷练习'], baseEnglish: ['英语套题练习'], translation: ['翻译套题模拟'], encyclopedia: ['百科套题练习'] },
+      // 周日 - 休息/查漏补缺
+      { politics: ['政治错题回顾'], baseEnglish: ['英语薄弱项补漏'], translation: ['翻译技巧回顾'], encyclopedia: ['百科查漏补缺'] }
+    ];
+
+    for (let w = 0; w < 4; w++) {
+      const week = [];
+      for (let d = 0; d < 7; d++) {
+        const template = dayTasksTemplate[d];
+        const dayTasks = [];
+        
+        template.politics.forEach(t => {
+          dayTasks.push({ subject: 'politics', name: t, tag: '政治' });
+        });
+        template.baseEnglish.forEach(t => {
+          dayTasks.push({ subject: 'base', name: t, tag: '基英' });
+        });
+        template.translation.forEach(t => {
+          dayTasks.push({ subject: 'trans', name: t, tag: '翻译' });
+        });
+        template.encyclopedia.forEach(t => {
+          dayTasks.push({ subject: 'encyclo', name: t, tag: '百科' });
+        });
+
+        week.push({
+          day: weekDays[d],
+          weekNum: w + 1,
+          tasks: dayTasks,
+          isWeekend: d >= 5
+        });
+      }
+      weeks.push(week);
+    }
+    return weeks;
+  }
+
+  // 生成每日详细规划
+  function generateDailyPlans(weekPlan, dailyHours) {
+    const schedules = [];
+    
+    // 工作日详细时间表
+    const weekdaySchedule = [
+      { time: '06:30-07:00', content: '🌅 起床洗漱+一杯温水，元气满满开启新的一天', duration: '0.5h', subject: 'rest' },
+      { time: '07:00-08:00', content: '🍳 早餐+晨读时间：背单词50个 + 词条10个 + 外刊听力磨耳朵', duration: '1h', subject: 'base' },
+      { time: '08:00-09:30', content: '📘 翻译练习（一）：英译汉1篇，先自己翻，再对照参考译文修改', duration: '1.5h', subject: 'trans' },
+      { time: '09:30-09:45', content: '☕ 休息一下：站起来活动活动，喝杯水，看看远方', duration: '0.25h', subject: 'rest' },
+      { time: '09:45-11:15', content: '📗 翻译硕士英语：专八阅读2篇 + 语法词汇题 + 错题整理', duration: '1.5h', subject: 'base' },
+      { time: '11:15-12:00', content: '📝 翻译复盘：早上的英译汉复盘，整理优秀表达到积累本', duration: '0.75h', subject: 'trans' },
+      { time: '12:00-14:00', content: '🍱 午餐+午休：一定要睡午觉！20-30分钟最佳，下午效率翻倍', duration: '2h', subject: 'rest' },
+      { time: '14:00-15:30', content: '📘 翻译练习（二）：汉译英1篇，注意语法和用词准确性', duration: '1.5h', subject: 'trans' },
+      { time: '15:30-15:45', content: '🍪 下午茶时间：吃点小零食，听听音乐放松一下', duration: '0.25h', subject: 'rest' },
+      { time: '15:45-17:15', content: '📙 百科知识：名词解释背诵15个 + 作文素材积累', duration: '1.5h', subject: 'encyclo' },
+      { time: '17:15-18:00', content: '📝 词条背诵：30个CE/EC词条，用艾宾浩斯法复习前一天的', duration: '0.75h', subject: 'trans' },
+      { time: '18:00-19:00', content: '🌆 晚餐+散步：出去走走，换换脑子，运动一下', duration: '1h', subject: 'rest' },
+      { time: '19:00-20:30', content: '📕 政治学习：网课+刷题，注意整理错题和知识点', duration: '1.5h', subject: 'politics' },
+      { time: '20:30-21:00', content: '🧘 休息放松：刷会儿手机，和朋友聊聊天', duration: '0.5h', subject: 'rest' },
+      { time: '21:00-22:00', content: '📋 今日复盘：回顾今天学了什么，整理错题本，制定明日计划', duration: '1h', subject: 'review' },
+      { time: '22:00-22:30', content: '😴 睡前准备：泡脚/听轻音乐，早点睡觉养足精神', duration: '0.5h', subject: 'rest' }
+    ];
+
+    // 周六（模考日）
+    const saturdaySchedule = [
+      { time: '07:00-08:00', content: '🍳 早餐+晨读：回顾本周重点单词和词条', duration: '1h', subject: 'base' },
+      { time: '08:30-11:30', content: '📝 全真模拟（上）：政治/基英 按考试时间严格模拟', duration: '3h', subject: 'mock' },
+      { time: '11:30-14:00', content: '🍱 午餐+午休：好好吃饭，好好休息', duration: '2.5h', subject: 'rest' },
+      { time: '14:00-17:00', content: '📝 全真模拟（下）：翻译基础/百科 严格计时完成', duration: '3h', subject: 'mock' },
+      { time: '17:00-18:30', content: '🍽️ 晚餐+休息：考完放松一下', duration: '1.5h', subject: 'rest' },
+      { time: '18:30-20:00', content: '📊 模考复盘：对答案，分析错题，找出薄弱环节', duration: '1.5h', subject: 'review' },
+      { time: '20:00-22:00', content: '🎉 自由时间：看看剧/刷刷手机，犒劳一下努力的自己', duration: '2h', subject: 'rest' }
+    ];
+
+    // 周日（复盘+调整日）
+    const sundaySchedule = [
+      { time: '07:30-08:30', content: '😴 睡个懒觉+早餐：周末可以稍微晚起一点', duration: '1h', subject: 'rest' },
+      { time: '08:30-10:00', content: '📚 本周复盘：翻看各科错题本，整理本周收获', duration: '1.5h', subject: 'review' },
+      { time: '10:00-10:30', content: '☕ 休息+喝茶：享受周末的悠闲时光', duration: '0.5h', subject: 'rest' },
+      { time: '10:30-12:00', content: '📗 薄弱项补漏：针对本周发现的问题重点突破', duration: '1.5h', subject: 'base' },
+      { time: '12:00-14:00', content: '🍱 午餐+午休：周末也要好好吃饭哦', duration: '2h', subject: 'rest' },
+      { time: '14:00-15:30', content: '📘 翻译精做：挑一篇本周的翻译再精翻一遍', duration: '1.5h', subject: 'trans' },
+      { time: '15:30-17:00', content: '📙 百科+作文：积累作文素材，写一篇小作文练练手', duration: '1.5h', subject: 'encyclo' },
+      { time: '17:00-19:00', content: '🌆 运动+晚餐：出去跑跑步或者健健身', duration: '2h', subject: 'rest' },
+      { time: '19:00-20:30', content: '📕 政治：本周政治错题回顾+知识点梳理', duration: '1.5h', subject: 'politics' },
+      { time: '20:30-21:30', content: '📋 制定下周计划：明确目标，合理安排时间', duration: '1h', subject: 'review' },
+      { time: '21:30-22:30', content: '🛁 放松时间：早点洗漱，准备迎接新的一周', duration: '1h', subject: 'rest' }
+    ];
+
+    for (let d = 0; d < 7; d++) {
+      let daySchedule;
+      if (d === 5) {
+        // 周六
+        daySchedule = saturdaySchedule.map(item => ({ ...item }));
+      } else if (d === 6) {
+        // 周日
+        daySchedule = sundaySchedule.map(item => ({ ...item }));
+      } else {
+        // 周一到周五
+        daySchedule = weekdaySchedule.map(item => ({ ...item }));
+      }
+
+      schedules.push({
+        day: weekDays[d],
+        schedule: daySchedule,
+        totalHours: dailyHours,
+        isWeekend: d >= 5
+      });
+    }
+    return schedules;
+  }
+
+  // 渲染结果
+  function renderResult() {
+    const plan = currentPlan;
+    
+    document.getElementById('resultPlaceholder').style.display = 'none';
+    document.getElementById('resultContent').style.display = 'block';
+    
+    // 更新头部信息
+    document.getElementById('resultTitle').textContent = `${plan.nickname}的MTI备考规划`;
+    
+    const schoolMap = { top: '顶尖学府', high: '重点院校', medium: '普通院校' };
+    const directionMap = { translation: '英语笔译', interpretation: '英语口译' };
+    document.getElementById('metaSchool').textContent = schoolMap[plan.targetSchool];
+    document.getElementById('metaDirection').textContent = directionMap[plan.direction];
+    document.getElementById('metaDuration').textContent = `${plan.totalMonths}个月`;
+    document.getElementById('metaHours').textContent = `${plan.dailyHours}小时`;
+    
+    // 渲染年度视图
+    renderYearView();
+    
+    // 渲染月份选择器
+    renderMonthSelector();
+    renderMonthPlan(0);
+    
+    // 渲染周选择器
+    renderWeekSelector();
+    renderWeekPlan(0);
+    
+    // 渲染日选择器
+    renderDaySelector();
+    renderDailyPlan(0);
+  }
+
+  function renderYearView() {
+    const plan = currentPlan;
+    const container = document.getElementById('yearOverview');
+    
+    let html = '';
+    let monthCount = 0;
+    
+    const phaseDetails = [
+      {
+        // 基础阶段
+        goals: [
+          '📖 词汇量突破8000+，专八词汇至少背完2轮',
+          '✍️ 掌握基本翻译技巧，能独立完成基础篇章翻译',
+          '📚 语法体系完整梳理，基础语法盲区全部扫清',
+          '🧠 百科知识框架搭建完成，积累500+名词解释',
+          '⏰ 养成稳定的学习习惯，每天高效学习6小时+',
+          '🎯 确定目标院校，收集好真题和参考资料'
+        ],
+        core: '核心：打牢基础，建立框架，养成习惯',
+        tips: '⚠️ 避坑：不要急于求成，基础不牢地动山摇！不要一开始就啃真题。',
+        books: '重点书目：武峰十二天、韩刚译点通、专四语法1000题、如鱼得水记单词'
+      },
+      {
+        // 强化阶段
+        goals: [
+          '✍️ 翻译能力质的飞跃，达到CATTI三笔/二笔水平',
+          '📚 目标院校真题研究透彻，掌握出题规律和偏好',
+          '📝 政治选择题稳定在38-40分+',
+          '📖 基英阅读正确率80%+，作文形成自己的模板',
+          '🧠 百科知识覆盖80%考点，大作文能稳定输出',
+          '📊 各科错题本建立完成，薄弱项逐个突破'
+        ],
+        core: '核心：强化提升，研究真题，突破难点',
+        tips: '⚠️ 避坑：不要盲目刷题不复盘！复盘的时间要大于做题时间。',
+        books: '重点书目：黄皮书真题、CATTI真题、张培基散文、腿姐背诵手册'
+      },
+      {
+        // 冲刺阶段
+        goals: [
+          '⏰ 全真模拟熟练，适应考试节奏和时间分配',
+          '📝 政治大题背诵滚瓜烂熟，选择题稳定40+',
+          '✍️ 翻译速度和质量达标，词条尽量拿满分',
+          '📖 基英和百科保持手感，作文模板熟练应用',
+          '📊 所有错题复盘完毕，查漏补缺完成',
+          '😌 心态平稳，自信满满迎接考试'
+        ],
+        core: '核心：全真模拟，查漏补缺，调整状态',
+        tips: '⚠️ 避坑：不要熬夜学习！保持正常作息，考前身体最重要。',
+        books: '重点书目：肖四肖八、目标院校真题、错题本、各类押题卷'
+      }
+    ];
+    
+    plan.phases.forEach((phase, idx) => {
+      const startMonth = plan.months[monthCount]?.name || '';
+      const endMonth = plan.months[monthCount + phase.months - 1]?.name || plan.months[plan.months.length - 1]?.name;
+      const detail = phaseDetails[idx] || phaseDetails[phaseDetails.length - 1];
+      
+      html += `
+        <div class="phase-card ${phase.color}">
+          <div class="phase-title">
+            <span>${phase.icon}</span>
+            ${phase.name}
+          </div>
+          <div class="phase-time">${startMonth} - ${endMonth} · ${phase.months}个月 · ${phase.desc}</div>
+          <div style="margin: 10px 0; padding: 8px 12px; background: rgba(86, 184, 158, 0.12); border-radius: 8px; font-size: 13px; color: var(--sage-deep); font-weight: 500;">
+            ${detail.core}
+          </div>
+          <div style="font-size: 13px; color: var(--deep-brown); font-weight: 500; margin: 10px 0 6px;">🎯 阶段目标：</div>
+          <ul class="phase-goals">
+            ${detail.goals.map(g => `<li>${g}</li>`).join('')}
+          </ul>
+          <div style="margin-top: 12px; padding: 8px 12px; background: rgba(136, 216, 240, 0.15); border-radius: 8px; border-left: 3px solid var(--gold);">
+            <div style="font-size: 12px; color: #5E7A74;">${detail.tips}</div>
+          </div>
+          <div style="margin-top: 8px; font-size: 12px; color: var(--warm-brown);">
+            📖 ${detail.books}
+          </div>
+        </div>
+      `;
+      
+      monthCount += phase.months;
+    });
+    
+    container.innerHTML = html;
+  }
+
+  function renderMonthSelector() {
+    const plan = currentPlan;
+    const container = document.getElementById('monthSelector');
+    
+    let html = '';
+    plan.months.forEach((month, idx) => {
+      const phase = getPhaseForMonth(idx, plan.phases);
+      html += `<button class="month-btn ${idx === 0 ? 'active' : ''}" data-month="${idx}">${month.name}</button>`;
+    });
+    
+    container.innerHTML = html;
+    
+    // 绑定事件
+    container.querySelectorAll('.month-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        container.querySelectorAll('.month-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentMonthIndex = parseInt(btn.dataset.month);
+        renderMonthPlan(currentMonthIndex);
+      });
+    });
+  }
+
+  function renderMonthPlan(monthIdx) {
+    const plan = currentPlan;
+    const monthPlan = plan.monthlyPlans[monthIdx];
+    const container = document.getElementById('monthPlan');
+    
+    const subjects = [
+      { key: 'politics', name: '政治', icon: '📕', class: 'politics' },
+      { key: 'baseEnglish', name: '翻译硕士英语', icon: '📗', class: 'base' },
+      { key: 'translation', name: '英语翻译基础', icon: '📘', class: 'translation' },
+      { key: 'encyclopedia', name: '汉语写作与百科知识', icon: '📙', class: 'encyclopedia' }
+    ];
+    
+    let html = '';
+    subjects.forEach(subj => {
+      const data = monthPlan[subj.key];
+      html += `
+        <div class="subject-card">
+          <div class="subject-header">
+            <div class="subject-icon ${subj.class}">${subj.icon}</div>
+            <div>
+              <div class="subject-name">${subj.name}</div>
+              <div style="font-size: 12px; color: var(--warm-brown);">建议每日 ${data.hours}</div>
+            </div>
+          </div>
+          <ul class="subject-tasks">
+            ${data.tasks.map(t => `<li>${t}</li>`).join('')}
+          </ul>
+          ${data.books ? `
+          <div style="margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--cream-deep);">
+            <div style="font-size: 12px; color: var(--warm-brown); margin-bottom: 4px;">📖 推荐书目：</div>
+            <div style="font-size: 12px; color: var(--ink);">${data.books}</div>
+          </div>
+          ` : ''}
+          ${data.app ? `
+          <div style="margin-top: 8px;">
+            <div style="font-size: 12px; color: var(--warm-brown); margin-bottom: 4px;">📱 推荐APP/公众号：</div>
+            <div style="font-size: 12px; color: var(--ink);">${data.app}</div>
+          </div>
+          ` : ''}
+          ${data.tips ? `
+          <div style="margin-top: 10px; padding: 8px 12px; background: rgba(136, 216, 240, 0.15); border-radius: 8px; border-left: 3px solid var(--gold);">
+            <div style="font-size: 12px; color: #5E7A74;">💡 <strong>学姐小贴士：</strong>${data.tips}</div>
+          </div>
+          ` : ''}
+        </div>
+      `;
+    });
+    
+    container.innerHTML = html;
+  }
+
+  function renderWeekSelector() {
+    const container = document.getElementById('weekSelector');
+    let html = '';
+    for (let i = 0; i < 4; i++) {
+      html += `<button class="week-btn ${i === 0 ? 'active' : ''}" data-week="${i}">第${i + 1}周</button>`;
+    }
+    container.innerHTML = html;
+    
+    container.querySelectorAll('.week-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        container.querySelectorAll('.week-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentWeekIndex = parseInt(btn.dataset.week);
+        renderWeekPlan(currentWeekIndex);
+      });
+    });
+  }
+
+  function renderWeekPlan(weekIdx) {
+    const plan = currentPlan;
+    const weekPlan = plan.weeklyPlans[weekIdx];
+    const container = document.getElementById('weekPlan');
+    
+    let html = '';
+    weekPlan.forEach((day, idx) => {
+      html += `
+        <div class="day-card">
+          <div class="day-label">
+            <div class="day-name">${day.day}</div>
+            <div class="day-num">${day.isWeekend ? '周末调整' : '学习日'}</div>
+          </div>
+          <div class="day-tasks">
+            ${day.tasks.map(t => `
+              <div class="task-item">
+                <span class="task-tag tag-${t.subject}">${t.tag}</span>
+                <span>${t.name}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    });
+    
+    container.innerHTML = html;
+  }
+
+  function renderDaySelector() {
+    const container = document.getElementById('daySelector');
+    let html = '';
+    weekDays.forEach((day, idx) => {
+      html += `<button class="week-btn ${idx === 0 ? 'active' : ''}" data-day="${idx}">${day}</button>`;
+    });
+    container.innerHTML = html;
+    
+    container.querySelectorAll('.week-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        container.querySelectorAll('.week-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentDayIndex = parseInt(btn.dataset.day);
+        renderDailyPlan(currentDayIndex);
+      });
+    });
+  }
+
+  function renderDailyPlan(dayIdx) {
+    const plan = currentPlan;
+    const dailyPlan = plan.dailyPlans[dayIdx];
+    const container = document.getElementById('dailyPlan');
+    
+    let totalStudy = 0;
+    const scheduleHtml = dailyPlan.schedule.map(item => {
+      if (item.subject !== 'rest') {
+        const hours = parseFloat(item.duration);
+        totalStudy += hours;
+      }
+      return `
+        <div class="schedule-item">
+          <div class="schedule-time">${item.time}</div>
+          <div class="schedule-content">${item.content}</div>
+          <div class="schedule-duration">${item.duration}</div>
+        </div>
+      `;
+    }).join('');
+    
+    container.innerHTML = `
+      <div class="daily-date">
+        <span>📅</span>
+        ${dailyPlan.day} 学习安排
+      </div>
+      <div class="daily-schedule">
+        ${scheduleHtml}
+      </div>
+      <div class="daily-total">
+        <span>今日学习总时长</span>
+        <strong>约 ${totalStudy} 小时</strong>
+      </div>
+    `;
+  }
+
+  // 时间维度切换
+  document.querySelectorAll('.time-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const view = tab.dataset.view;
+      
+      document.querySelectorAll('.time-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      
+      document.querySelectorAll('.time-view').forEach(v => v.style.display = 'none');
+      document.getElementById(view + 'View').style.display = 'block';
+    });
+  });
+
+  // ==================== 导出功能 ====================
+
+  // 导出Word文档
+  document.getElementById('exportWordBtn').addEventListener('click', exportToWord);
+  document.getElementById('exportPdfBtn').addEventListener('click', exportToPdf);
+
+  function exportToWord() {
+    if (!currentPlan) {
+      alert('请先生成规划再导出哦~');
+      return;
+    }
+
+    const plan = currentPlan;
+    const schoolMap = { top: '顶尖学府', high: '重点院校', medium: '普通院校' };
+    const directionMap = { translation: '英语笔译', interpretation: '英语口译' };
+
+    // 构建完整的HTML内容
+    let htmlContent = `
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="utf-8">
+<title>${plan.nickname}的MTI备考规划</title>
+<style>
+  body { font-family: "Microsoft YaHei", "SimSun", sans-serif; font-size: 14px; line-height: 1.8; color: #333; }
+  h1 { font-size: 24px; color: #3D9A82; text-align: center; margin-bottom: 10px; }
+  h2 { font-size: 18px; color: #2C3E50; border-bottom: 2px solid #56B89E; padding-bottom: 6px; margin-top: 24px; }
+  h3 { font-size: 16px; color: #3D9A82; margin-top: 16px; }
+  h4 { font-size: 14px; color: #2C3E50; margin-top: 12px; }
+  .info-bar { background: #E8F8F2; padding: 12px 20px; border-radius: 8px; margin-bottom: 20px; }
+  .info-bar span { margin-right: 20px; }
+  .info-bar strong { color: #3D9A82; }
+  .phase { margin: 16px 0; padding: 12px 16px; border-left: 4px solid #56B89E; background: #F0FAF7; }
+  .phase.phase2 { border-left-color: #4A90B8; }
+  .phase.phase3 { border-left-color: #C5B4E3; }
+  .phase-title { font-weight: bold; font-size: 15px; margin-bottom: 6px; }
+  .phase-time { color: #7A8A8F; font-size: 13px; margin-bottom: 8px; }
+  ul { margin: 8px 0; padding-left: 24px; }
+  li { margin: 4px 0; }
+  .subject-card { margin: 12px 0; padding: 12px; background: #F0FAF7; border-radius: 8px; }
+  .subject-name { font-weight: bold; color: #2C3E50; margin-bottom: 8px; }
+  .month-header { background: #56B89E; color: white; padding: 8px 16px; border-radius: 6px; margin-top: 20px; }
+  .week-header { background: #4A90B8; color: white; padding: 6px 12px; border-radius: 4px; margin-top: 16px; }
+  .day-card { margin: 8px 0; padding: 10px; background: #F0FAF7; border-radius: 6px; }
+  .day-name { font-weight: bold; color: #3D9A82; }
+  .schedule-item { padding: 4px 0; border-bottom: 1px dashed #D6EAE3; }
+  .schedule-time { color: #3D9A82; font-weight: bold; margin-right: 10px; }
+  .schedule-duration { color: #7A8A8F; float: right; }
+  .footer { margin-top: 30px; text-align: center; color: #7A8A8F; font-size: 12px; border-top: 1px solid #D6EAE3; padding-top: 12px; }
+  .task-tag { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 12px; margin-right: 6px; }
+  .tag-politics { background: #FFE6EA; color: #E8798C; }
+  .tag-base { background: #E8F8F2; color: #3D9A82; }
+  .tag-trans { background: #E4F4FB; color: #4A90B8; }
+  .tag-encyclo { background: #F0EBFA; color: #8B7BC0; }
+</style>
+</head>
+<body>
+<h1>${plan.nickname}的MTI备考规划</h1>
+<div class="info-bar">
+  <span>目标院校：<strong>${schoolMap[plan.targetSchool]}</strong></span>
+  <span>报考方向：<strong>${directionMap[plan.direction]}</strong></span>
+  <span>备考时长：<strong>${plan.totalMonths}个月</strong></span>
+  <span>每日学习：<strong>${plan.dailyHours}小时</strong></span>
+</div>
+`;
+
+    // 年度概览
+    htmlContent += '<h2>📅 年度规划概览</h2>';
+    let monthCount = 0;
+    plan.phases.forEach((phase, idx) => {
+      const startMonth = plan.months[monthCount]?.name || '';
+      const endMonth = plan.months[monthCount + phase.months - 1]?.name || plan.months[plan.months.length - 1]?.name;
+      const goals = [
+        idx === 0 ? '词汇量达到专八水平，建立完整的翻译技巧体系' : idx === 1 ? '翻译能力大幅提升，真题研究透彻' : '应试状态调整到最佳，模考成绩稳定达标',
+        idx === 0 ? '养成稳定的学习习惯，百科知识框架搭建完成' : idx === 1 ? '政治选择题正确率稳定，作文形成自己的风格' : '心态平稳，自信应考，所有科目查漏补缺',
+        idx === 0 ? '确定目标院校，收集真题和参考资料' : idx === 1 ? '各科全面强化，突破重难点' : '冲刺背诵，保持最佳状态'
+      ];
+      
+      htmlContent += `
+<div class="phase ${idx === 1 ? 'phase2' : idx === 2 ? 'phase3' : ''}">
+  <div class="phase-title">${phase.icon} ${phase.name}</div>
+  <div class="phase-time">${startMonth} - ${endMonth} · ${phase.months}个月 · ${phase.desc}</div>
+  <ul>
+    ${goals.map(g => `<li>${g}</li>`).join('')}
+  </ul>
+</div>
+`;
+      monthCount += phase.months;
+    });
+
+    // 月度规划（全部月份）
+    htmlContent += '<h2>📆 月度学习规划</h2>';
+    plan.monthlyPlans.forEach((mp, idx) => {
+      htmlContent += `
+<div class="month-header">${mp.month.name} · ${mp.phase.name}</div>
+<div class="subject-card">
+  <div class="subject-name">📕 政治（建议每日 ${mp.politics.hours}）</div>
+  <ul>${mp.politics.tasks.map(t => `<li>${t}</li>`).join('')}</ul>
+</div>
+<div class="subject-card">
+  <div class="subject-name">📗 翻译硕士英语（建议每日 ${mp.baseEnglish.hours}）</div>
+  <ul>${mp.baseEnglish.tasks.map(t => `<li>${t}</li>`).join('')}</ul>
+</div>
+<div class="subject-card">
+  <div class="subject-name">📘 英语翻译基础（建议每日 ${mp.translation.hours}）</div>
+  <ul>${mp.translation.tasks.map(t => `<li>${t}</li>`).join('')}</ul>
+</div>
+<div class="subject-card">
+  <div class="subject-name">📙 汉语写作与百科知识（建议每日 ${mp.encyclopedia.hours}）</div>
+  <ul>${mp.encyclopedia.tasks.map(t => `<li>${t}</li>`).join('')}</ul>
+</div>
+`;
+    });
+
+    // 周度规划示例（第一个月的4周）
+    htmlContent += '<h2>📋 周度安排示例（首月）</h2>';
+    plan.weeklyPlans.forEach((week, widx) => {
+      htmlContent += `<div class="week-header">第${widx + 1}周</div>`;
+      week.forEach(day => {
+        htmlContent += `
+<div class="day-card">
+  <div class="day-name">${day.day}${day.isWeekend ? '（周末）' : ''}</div>
+  <ul>
+    ${day.tasks.map(t => `<li><span class="task-tag tag-${t.subject}">${t.tag}</span>${t.name}</li>`).join('')}
+  </ul>
+</div>
+`;
+      });
+    });
+
+    // 每日规划示例（第一周周一到周日）
+    htmlContent += '<h2>⏰ 每日时间安排示例（首周）</h2>';
+    plan.dailyPlans.forEach(dp => {
+      let totalStudy = 0;
+      const scheduleHtml = dp.schedule.map(item => {
+        if (item.subject !== 'rest') {
+          const hours = parseFloat(item.duration);
+          totalStudy += hours;
+        }
+        return `<div class="schedule-item"><span class="schedule-time">${item.time}</span>${item.content}<span class="schedule-duration">${item.duration}</span></div>`;
+      }).join('');
+      
+      htmlContent += `
+<div class="day-card">
+  <div class="day-name">${dp.day}（学习约 ${totalStudy} 小时）</div>
+  ${scheduleHtml}
+</div>
+`;
+    });
+
+    htmlContent += `
+<div class="footer">
+  本规划由锦鲤学姐Ivy的MTI规划手册生成<br>
+  祝${plan.nickname}同学一战成硕，锦鲤护体！🐠✨
+</div>
+</body>
+</html>
+`;
+
+    // 创建Blob并下载
+    const blob = new Blob(['\ufeff', htmlContent], {
+      type: 'application/msword;charset=utf-8'
+    });
+    
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `${plan.nickname}_MTI备考规划.doc`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  }
+
+  function exportToPdf() {
+    if (!currentPlan) {
+      alert('请先生成规划再导出哦~');
+      return;
+    }
+
+    // 用打印方式导出PDF，打开打印预览用户可选择保存为PDF
+    const plan = currentPlan;
+    const schoolMap = { top: '顶尖学府', high: '重点院校', medium: '普通院校' };
+    const directionMap = { translation: '英语笔译', interpretation: '英语口译' };
+
+    // 构建打印用的HTML
+    let printHtml = `
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>${plan.nickname}的MTI备考规划</title>
+<style>
+  @page { size: A4; margin: 20mm; }
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; font-size: 13px; line-height: 1.7; color: #333; }
+  h1 { font-size: 22px; color: #3D9A82; text-align: center; margin-bottom: 8px; }
+  h2 { font-size: 16px; color: #2C3E50; border-bottom: 2px solid #56B89E; padding-bottom: 4px; margin-top: 20px; page-break-after: avoid; }
+  h3 { font-size: 14px; color: #3D9A82; margin-top: 12px; }
+  .info-bar { background: #E8F8F2; padding: 10px 16px; border-radius: 6px; margin-bottom: 16px; font-size: 12px; }
+  .info-bar span { margin-right: 16px; }
+  .info-bar strong { color: #3D9A82; }
+  .phase { margin: 10px 0; padding: 10px 14px; border-left: 3px solid #56B89E; background: #F0FAF7; }
+  .phase.phase2 { border-left-color: #4A90B8; }
+  .phase.phase3 { border-left-color: #C5B4E3; }
+  .phase-title { font-weight: bold; margin-bottom: 4px; }
+  .phase-time { color: #7A8A8F; font-size: 12px; margin-bottom: 6px; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { margin: 3px 0; }
+  .subject-card { margin: 8px 0; padding: 8px 10px; background: #F0FAF7; border-radius: 6px; page-break-inside: avoid; }
+  .subject-name { font-weight: bold; color: #2C3E50; margin-bottom: 4px; font-size: 13px; }
+  .month-header { background: #56B89E; color: white; padding: 6px 12px; border-radius: 4px; margin-top: 16px; page-break-after: avoid; }
+  .week-header { background: #4A90B8; color: white; padding: 4px 10px; border-radius: 4px; margin-top: 12px; page-break-after: avoid; }
+  .day-card { margin: 6px 0; padding: 8px; background: #F0FAF7; border-radius: 4px; page-break-inside: avoid; }
+  .day-name { font-weight: bold; color: #3D9A82; margin-bottom: 4px; }
+  .schedule-item { padding: 3px 0; border-bottom: 1px dashed #D6EAE3; font-size: 12px; }
+  .schedule-time { color: #3D9A82; font-weight: bold; margin-right: 8px; }
+  .schedule-duration { color: #7A8A8F; float: right; }
+  .footer { margin-top: 20px; text-align: center; color: #7A8A8F; font-size: 11px; border-top: 1px solid #D6EAE3; padding-top: 8px; }
+  .task-tag { display: inline-block; padding: 1px 5px; border-radius: 3px; font-size: 11px; margin-right: 4px; }
+  .tag-politics { background: #FFE6EA; color: #E8798C; }
+  .tag-base { background: #E8F8F2; color: #3D9A82; }
+  .tag-trans { background: #E4F4FB; color: #4A90B8; }
+  .tag-encyclo { background: #F0EBFA; color: #8B7BC0; }
+</style>
+</head>
+<body>
+<h1>${plan.nickname}的MTI备考规划</h1>
+<div class="info-bar">
+  <span>目标院校：<strong>${schoolMap[plan.targetSchool]}</strong></span>
+  <span>报考方向：<strong>${directionMap[plan.direction]}</strong></span>
+  <span>备考时长：<strong>${plan.totalMonths}个月</strong></span>
+  <span>每日学习：<strong>${plan.dailyHours}小时</strong></span>
+</div>
+`;
+
+    // 年度概览
+    printHtml += '<h2>📅 年度规划概览</h2>';
+    let monthCount = 0;
+    plan.phases.forEach((phase, idx) => {
+      const startMonth = plan.months[monthCount]?.name || '';
+      const endMonth = plan.months[monthCount + phase.months - 1]?.name || plan.months[plan.months.length - 1]?.name;
+      const goals = [
+        idx === 0 ? '词汇量达到专八水平，建立完整的翻译技巧体系' : idx === 1 ? '翻译能力大幅提升，真题研究透彻' : '应试状态调整到最佳，模考成绩稳定达标',
+        idx === 0 ? '养成稳定的学习习惯，百科知识框架搭建完成' : idx === 1 ? '政治选择题正确率稳定，作文形成自己的风格' : '心态平稳，自信应考，所有科目查漏补缺',
+      ];
+      
+      printHtml += `
+<div class="phase ${idx === 1 ? 'phase2' : idx === 2 ? 'phase3' : ''}">
+  <div class="phase-title">${phase.icon} ${phase.name}</div>
+  <div class="phase-time">${startMonth} - ${endMonth} · ${phase.months}个月 · ${phase.desc}</div>
+  <ul>
+    ${goals.map(g => `<li>${g}</li>`).join('')}
+  </ul>
+</div>
+`;
+      monthCount += phase.months;
+    });
+
+    // 月度规划（全部月份）
+    printHtml += '<h2>📆 月度学习规划</h2>';
+    plan.monthlyPlans.forEach((mp, idx) => {
+      printHtml += `
+<div class="month-header">${mp.month.name} · ${mp.phase.name}</div>
+<div class="subject-card">
+  <div class="subject-name">📕 政治（建议每日 ${mp.politics.hours}）</div>
+  <ul>${mp.politics.tasks.map(t => `<li>${t}</li>`).join('')}</ul>
+</div>
+<div class="subject-card">
+  <div class="subject-name">📗 翻译硕士英语（建议每日 ${mp.baseEnglish.hours}）</div>
+  <ul>${mp.baseEnglish.tasks.map(t => `<li>${t}</li>`).join('')}</ul>
+</div>
+<div class="subject-card">
+  <div class="subject-name">📘 英语翻译基础（建议每日 ${mp.translation.hours}）</div>
+  <ul>${mp.translation.tasks.map(t => `<li>${t}</li>`).join('')}</ul>
+</div>
+<div class="subject-card">
+  <div class="subject-name">📙 汉语写作与百科知识（建议每日 ${mp.encyclopedia.hours}）</div>
+  <ul>${mp.encyclopedia.tasks.map(t => `<li>${t}</li>`).join('')}</ul>
+</div>
+`;
+    });
+
+    // 周度规划
+    printHtml += '<h2>📋 周度安排示例（首月）</h2>';
+    plan.weeklyPlans.forEach((week, widx) => {
+      printHtml += `<h3>第${widx + 1}周</h3>`;
+      week.forEach(day => {
+        printHtml += `
+<div class="day-card">
+  <div class="day-name">${day.day}${day.isWeekend ? '（周末）' : ''}</div>
+  <ul>
+    ${day.tasks.map(t => `<li><span class="task-tag tag-${t.subject}">${t.tag}</span>${t.name}</li>`).join('')}
+  </ul>
+</div>
+`;
+      });
+    });
+
+    // 每日规划
+    printHtml += '<h2>⏰ 每日时间安排示例（首周）</h2>';
+    plan.dailyPlans.forEach(dp => {
+      let totalStudy = 0;
+      const scheduleHtml = dp.schedule.map(item => {
+        if (item.subject !== 'rest') {
+          const hours = parseFloat(item.duration);
+          totalStudy += hours;
+        }
+        return `<div class="schedule-item"><span class="schedule-time">${item.time}</span>${item.content}<span class="schedule-duration">${item.duration}</span></div>`;
+      }).join('');
+      
+      printHtml += `
+<div class="day-card">
+  <div class="day-name">${dp.day}（学习约 ${totalStudy} 小时）</div>
+  ${scheduleHtml}
+</div>
+`;
+    });
+
+    printHtml += `
+<div class="footer">
+  本规划由锦鲤学姐Ivy的MTI规划手册生成 · 祝${plan.nickname}一战成硕 🐠✨
+</div>
+</body>
+</html>
+`;
+
+    // 打开新窗口并打印
+    const printWindow = window.open('', '_blank');
+    printWindow.document.write(printHtml);
+    printWindow.document.close();
+    printWindow.focus();
+    setTimeout(() => {
+      printWindow.print();
+    }, 500);
+  }
+</script>
+
+</body>
+</html>
