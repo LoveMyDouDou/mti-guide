@@ -1684,9 +1684,151 @@
       display: none;
     }
   }
+
+  /* ===== 密码锁屏（仅线上版本） ===== */
+  body.locked { overflow: hidden; }
+  #lockScreen {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: linear-gradient(135deg, #E6F6F1 0%, #EAF4FB 50%, #F4F0FB 100%);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    overflow: hidden;
+  }
+  #lockScreen::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    top: -130px;
+    right: -110px;
+    background: radial-gradient(circle, rgba(86,184,158,0.22), transparent 70%);
+  }
+  #lockScreen::after {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    bottom: -120px;
+    left: -100px;
+    background: radial-gradient(circle, rgba(136,216,240,0.26), transparent 70%);
+  }
+  .lock-card {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 400px;
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 44px 36px 34px;
+    text-align: center;
+    box-shadow: 0 24px 60px rgba(61,154,130,0.16);
+    border: 1px solid rgba(86,184,158,0.14);
+  }
+  .lock-icon {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    background: linear-gradient(135deg, #56B89E, #4A90B8);
+    box-shadow: 0 10px 24px rgba(86,184,158,0.32);
+  }
+  .lock-title {
+    font-size: 19px;
+    font-weight: 700;
+    color: #2C4A42;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  .lock-sub {
+    font-size: 13.5px;
+    color: #7A948C;
+    margin-bottom: 26px;
+    line-height: 1.75;
+  }
+  #lockInput {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1.5px solid #D6EBE4;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #2C4A42;
+    background: #F7FBFA;
+    outline: none;
+    transition: all 0.25s;
+    text-align: center;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+  }
+  #lockInput:focus {
+    border-color: #56B89E;
+    background: #FFFFFF;
+    box-shadow: 0 0 0 4px rgba(86,184,158,0.12);
+  }
+  #lockBtn {
+    width: 100%;
+    margin-top: 16px;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #FFFFFF;
+    cursor: pointer;
+    background: linear-gradient(135deg, #56B89E, #4A90B8);
+    box-shadow: 0 10px 22px rgba(86,184,158,0.28);
+    transition: all 0.25s;
+  }
+  #lockBtn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(86,184,158,0.36); }
+  #lockBtn:active { transform: translateY(0); }
+  .lock-error {
+    margin-top: 14px;
+    font-size: 13px;
+    color: #E8607A;
+    min-height: 18px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .lock-error.show { opacity: 1; }
+  .lock-tip {
+    margin-top: 20px;
+    font-size: 12.5px;
+    color: #A9BFB9;
+  }
+  @keyframes lockShake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-8px); }
+    40% { transform: translateX(8px); }
+    60% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+  }
+  .lock-card.shake { animation: lockShake 0.4s; }
 </style>
 </head>
-<body>
+<body class="locked">
+
+<!-- 密码锁屏（仅线上版本，本地文件不锁） -->
+<div id="lockScreen">
+  <div class="lock-card" id="lockCard">
+    <div class="lock-icon">🔒</div>
+    <h1 class="lock-title">锦鲤学姐 Ivy 的<br>MTI 翻译硕士规划手册</h1>
+    <p class="lock-sub">请输入访问密码<br>解锁你的专属备考规划 🐠</p>
+    <input id="lockInput" type="password" placeholder="请输入密码" autocomplete="off">
+    <button id="lockBtn">解 锁</button>
+    <p class="lock-error" id="lockError"></p>
+    <p class="lock-tip">密码可向锦鲤学姐 Ivy 索取</p>
+  </div>
+</div>
 
 <!-- 顶部导航栏 -->
 <nav class="navbar" id="navbar">
@@ -3697,6 +3839,68 @@
       printWindow.print();
     }, 500);
   }
+</script>
+
+<!-- 密码锁屏脚本（仅线上版本） -->
+<script>
+(function () {
+  var PASSWORD_HASH = '19dbb21f6b09847aadb5e59457448341c251265b637e15bd3aa3369489ff5e41';
+  var STORE_KEY = 'ivy_mti_unlocked';
+  var gate = document.getElementById('lockScreen');
+  var input = document.getElementById('lockInput');
+  var btn = document.getElementById('lockBtn');
+  var errEl = document.getElementById('lockError');
+  var card = document.getElementById('lockCard');
+
+  function reveal() {
+    if (gate) gate.style.display = 'none';
+    document.body.classList.remove('locked');
+  }
+
+  try {
+    if (localStorage.getItem(STORE_KEY) === '1') { reveal(); return; }
+  } catch (e) {}
+
+  document.body.classList.add('locked');
+
+  function sha256(str) {
+    return crypto.subtle.digest('SHA-256', new TextEncoder().encode(str)).then(function (buf) {
+      return Array.prototype.map.call(new Uint8Array(buf), function (b) {
+        return b.toString(16).padStart(2, '0');
+      }).join('');
+    });
+  }
+
+  function showError(msg) {
+    errEl.textContent = msg;
+    errEl.classList.add('show');
+    card.classList.add('shake');
+    setTimeout(function () { card.classList.remove('shake'); }, 420);
+  }
+
+  function attempt() {
+    var val = input.value.trim();
+    if (!val) { showError('请输入密码'); return; }
+    sha256(val).then(function (h) {
+      if (h === PASSWORD_HASH) {
+        try { localStorage.setItem(STORE_KEY, '1'); } catch (e) {}
+        reveal();
+      } else {
+        showError('密码不正确，请再试一次');
+        input.value = '';
+        input.focus();
+      }
+    }).catch(function () {
+      showError('当前环境无法校验密码，请用 https 打开');
+    });
+  }
+
+  btn.addEventListener('click', attempt);
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') attempt();
+  });
+  setTimeout(function () { input.focus(); }, 120);
+})();
 </script>
 
 </body>
